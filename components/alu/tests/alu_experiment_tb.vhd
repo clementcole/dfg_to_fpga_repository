@@ -71,7 +71,7 @@ architecture testbench of ALU_EXPERIMENT_32_TB is
 	stm_test : process is
 		variable file_line 	: line;
 		variable data 		: std_logic_vector(75 downto 0);
-		file 	test_file	: text open read_mode is "C:\Modeltech_pe_edu_10.4a\ALU\data_input";
+		file 	test_file	: text open read_mode is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\alu\tests\data_inputs\data_input";
 	begin
 		
 		
@@ -80,45 +80,19 @@ architecture testbench of ALU_EXPERIMENT_32_TB is
 		-------------------------------------------------------------------------------------------------------------------------
 		--go <= '1';
 		input_ready <= '0';
-		--A <= (others => '0');
-		--B <= (others => '0');
 		rst <= '1'; 
-		wait for period;
+		wait for Period;
 		rst <= '0';
 		wait for (5 * period);
-   		--rst <= data(75); wait for period; 
-   		--Previous version
-		--wait for (10 * period);
-		--rst <= '1'; wait for Period;
-		--rst <= '0'; wait for Period;
-		--wait for (5 * period);
-		wait for 10 * Period;
 		wait for 9 ns;
 		while not endfile(test_file) loop
 			readline(test_file, file_line);
 			HREAD(file_line, data);
-			---Modifications
-			--input_ready <= '0';
-			--A <= (others => '0');
-			--B <= (others => '0');
-			--rst <= '1'; wait for period;
-			--wait for (5 * period);
-   			--rst <= data(75); 
-   			--wait for (9 ns); 
    			input_ready <= '1';  --1
-   			--wait for 1 ns;
 			Operation <= data(71 downto 64);
 			A        <=  (data(63 downto 32));
 			B        <=  (data(31 downto 0));
-			--input_ready <= '1';
-			--wait for 9 ns;
-			--input_ready <= '1';
-			wait for  Period;
-			--rst <= '1';
-			--wait for Period * 6;
-			--wait for 9 ns;
-			--input_ready <= '0';
-			--wait for 60 ns;
+			wait for  5 * Period;
 		end loop; 
 		wait;
 	end process;
