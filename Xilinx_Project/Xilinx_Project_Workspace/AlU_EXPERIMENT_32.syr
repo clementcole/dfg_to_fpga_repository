@@ -1,0 +1,1437 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: AlU_EXPERIMENT_32.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "AlU_EXPERIMENT_32.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "AlU_EXPERIMENT_32"
+Output Format                      : NGC
+Target Device                      : xc6vlx240t-1-ff1156
+
+---- Source Options
+Top Module Name                    : AlU_EXPERIMENT_32
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\Xilinx_Project\Xilinx_Project_Workspace\ipcore_dir\fifo_32.vhd" into library work
+Parsing entity <fifo_32>.
+Parsing architecture <fifo_32_a> of entity <fifo_32>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\Xilinx_Project\Xilinx_Project_Workspace\ipcore_dir\fp_mult.vhd" into library work
+Parsing entity <fp_mult>.
+Parsing architecture <fp_mult_a> of entity <fp_mult>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\Xilinx_Project\Xilinx_Project_Workspace\ipcore_dir\fp_div.vhd" into library work
+Parsing entity <fp_div>.
+Parsing architecture <fp_div_a> of entity <fp_div>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\Xilinx_Project\Xilinx_Project_Workspace\ipcore_dir\fp_add.vhd" into library work
+Parsing entity <fp_add>.
+Parsing architecture <fp_add_a> of entity <fp_add>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\Xilinx_Project\Xilinx_Project_Workspace\ipcore_dir\fp_sub.vhd" into library work
+Parsing entity <fp_sub>.
+Parsing architecture <fp_sub_a> of entity <fp_sub>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\Xilinx_Project\Xilinx_Project_Workspace\ipcore_dir\mult.vhd" into library work
+Parsing entity <mult>.
+Parsing architecture <mult_a> of entity <mult>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\packages\opcodes.vhd" into library work
+Parsing package <opcodes>.
+Parsing package body <opcodes>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_xor.vhd" into library work
+Parsing entity <shift_reg_xor>.
+Parsing architecture <arc> of entity <shift_reg_xor>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_xnor.vhd" into library work
+Parsing entity <shift_reg_xnor>.
+Parsing architecture <arc> of entity <shift_reg_xnor>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_srl.vhd" into library work
+Parsing entity <shift_reg_srl>.
+Parsing architecture <arc> of entity <shift_reg_srl>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_sra.vhd" into library work
+Parsing entity <shift_reg_sra>.
+Parsing architecture <arc> of entity <shift_reg_sra>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_sll.vhd" into library work
+Parsing entity <shift_reg_sll>.
+Parsing architecture <arc> of entity <shift_reg_sll>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_sla.vhd" into library work
+Parsing entity <shift_reg_sla>.
+Parsing architecture <arc> of entity <shift_reg_sla>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_ror.vhd" into library work
+Parsing entity <shift_reg_ror>.
+Parsing architecture <arc> of entity <shift_reg_ror>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_rol.vhd" into library work
+Parsing entity <shift_reg_rol>.
+Parsing architecture <arc> of entity <shift_reg_rol>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_or.vhd" into library work
+Parsing entity <shift_reg_or>.
+Parsing architecture <arc> of entity <shift_reg_or>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_not.vhd" into library work
+Parsing entity <shift_reg_not>.
+Parsing architecture <arc> of entity <shift_reg_not>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_nor.vhd" into library work
+Parsing entity <shift_reg_nor>.
+Parsing architecture <arc> of entity <shift_reg_nor>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_mult.vhd" into library work
+Parsing entity <shift_reg_mult>.
+Parsing architecture <arc> of entity <shift_reg_mult>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_fsub.vhd" into library work
+Parsing entity <shift_reg_fsub>.
+Parsing architecture <arc> of entity <shift_reg_fsub>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_fmult.vhd" into library work
+Parsing entity <shift_reg_fmult>.
+Parsing architecture <arc> of entity <shift_reg_fmult>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_fdiv.vhd" into library work
+Parsing entity <shift_reg_fdiv>.
+Parsing architecture <arc> of entity <shift_reg_fdiv>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_fadd.vhd" into library work
+Parsing entity <shift_reg_fadd>.
+Parsing architecture <arc> of entity <shift_reg_fadd>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_and.vhd" into library work
+Parsing entity <shift_reg_and>.
+Parsing architecture <arc> of entity <shift_reg_and>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_add.vhd" into library work
+Parsing entity <shift_reg_add>.
+Parsing architecture <arc> of entity <shift_reg_add>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\operators\logical\xor_n.vhd" into library work
+Parsing entity <xor_n>.
+Parsing architecture <behave> of entity <xor_n>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\operators\logical\xnor_n.vhd" into library work
+Parsing entity <xnor_n>.
+Parsing architecture <behave> of entity <xnor_n>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\operators\logical\srl_n.vhd" into library work
+Parsing entity <srl_n>.
+Parsing architecture <behave> of entity <srl_n>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\operators\logical\sll_n.vhd" into library work
+Parsing entity <sll_n>.
+Parsing architecture <behave> of entity <sll_n>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\operators\logical\ror_n.vhd" into library work
+Parsing entity <ror_n>.
+Parsing architecture <behave> of entity <ror_n>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\operators\logical\rol_n.vhd" into library work
+Parsing entity <rol_n>.
+Parsing architecture <behave> of entity <rol_n>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\operators\logical\or_n.vhd" into library work
+Parsing entity <or_n>.
+Parsing architecture <behave> of entity <or_n>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\operators\logical\not_n.vhd" into library work
+Parsing entity <not_n>.
+Parsing architecture <behave> of entity <not_n>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\operators\logical\nor_n.vhd" into library work
+Parsing entity <nor_n>.
+Parsing architecture <behave> of entity <nor_n>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\operators\logical\and_n.vhd" into library work
+Parsing entity <and_n>.
+Parsing architecture <behave> of entity <and_n>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\operators\arithmetic\integer\sra_n.vhd" into library work
+Parsing entity <sra_n>.
+Parsing architecture <behave> of entity <sra_n>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\operators\arithmetic\integer\sla_n.vhd" into library work
+Parsing entity <sla_n>.
+Parsing architecture <behave> of entity <sla_n>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\operators\arithmetic\integer\add_sub_n.vhd" into library work
+Parsing entity <add_sub_n>.
+Parsing architecture <behave> of entity <add_sub_n>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\xor_reg.vhd" into library work
+Parsing entity <xor_reg>.
+Parsing architecture <BEHAVIORAL> of entity <xor_reg>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\xnor_reg.vhd" into library work
+Parsing entity <xnor_reg>.
+Parsing architecture <behavioral> of entity <xnor_reg>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\srl_reg.vhd" into library work
+Parsing entity <srl_reg>.
+Parsing architecture <behavioral> of entity <srl_reg>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\sra_reg.vhd" into library work
+Parsing entity <sra_reg>.
+Parsing architecture <behavioral> of entity <sra_reg>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\sll_reg.vhd" into library work
+Parsing entity <sll_reg>.
+Parsing architecture <behavioral> of entity <sll_reg>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\sla_reg.vhd" into library work
+Parsing entity <sla_reg>.
+Parsing architecture <behavioral> of entity <sla_reg>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\ror_reg.vhd" into library work
+Parsing entity <ror_reg>.
+Parsing architecture <behavioral> of entity <ror_reg>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\rol_reg.vhd" into library work
+Parsing entity <rol_reg>.
+Parsing architecture <behavioral> of entity <rol_reg>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\or_reg.vhd" into library work
+Parsing entity <or_reg>.
+Parsing architecture <behavioral> of entity <or_reg>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\not_reg.vhd" into library work
+Parsing entity <not_reg>.
+Parsing architecture <behavioral> of entity <not_reg>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\nor_reg.vhd" into library work
+Parsing entity <nor_reg>.
+Parsing architecture <behavioral> of entity <nor_reg>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\mult_reg.vhd" into library work
+Parsing entity <mult_reg>.
+Parsing architecture <BEHAVIORAL> of entity <mult_reg>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\fsub_reg.vhd" into library work
+Parsing entity <fsub_reg>.
+Parsing architecture <behavioral> of entity <fsub_reg>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\fmult_reg.vhd" into library work
+Parsing entity <fmult_reg>.
+Parsing architecture <behavioral> of entity <fmult_reg>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\fdiv_reg.vhd" into library work
+Parsing entity <fdiv_reg>.
+Parsing architecture <behavioral> of entity <fdiv_reg>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\fadd_reg.vhd" into library work
+Parsing entity <fadd_reg>.
+Parsing architecture <behavioral> of entity <fadd_reg>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\and_reg.vhd" into library work
+Parsing entity <and_reg>.
+Parsing architecture <behavioral> of entity <and_reg>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\add_sub_reg.vhd" into library work
+Parsing entity <add_sub_reg>.
+Parsing architecture <behavioral> of entity <add_sub_reg>.
+Parsing VHDL file "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\alu\ALU_EXPERIMENT.vhd" into library work
+Parsing entity <AlU_EXPERIMENT_32>.
+Parsing architecture <BEHAVIORAL> of entity <alu_experiment_32>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <AlU_EXPERIMENT_32> (architecture <BEHAVIORAL>) with generics from library <work>.
+
+Elaborating entity <fifo_32> (architecture <fifo_32_a>) from library <work>.
+
+Elaborating entity <add_sub_reg> (architecture <behavioral>) with generics from library <work>.
+
+Elaborating entity <shift_reg_add> (architecture <arc>) from library <work>.
+
+Elaborating entity <add_sub_n> (architecture <behave>) with generics from library <work>.
+
+Elaborating entity <mult_reg> (architecture <BEHAVIORAL>) with generics from library <work>.
+
+Elaborating entity <shift_reg_mult> (architecture <arc>) from library <work>.
+
+Elaborating entity <mult> (architecture <mult_a>) from library <work>.
+
+Elaborating entity <or_reg> (architecture <behavioral>) with generics from library <work>.
+
+Elaborating entity <shift_reg_or> (architecture <arc>) from library <work>.
+
+Elaborating entity <or_n> (architecture <behave>) with generics from library <work>.
+
+Elaborating entity <nor_reg> (architecture <behavioral>) with generics from library <work>.
+
+Elaborating entity <shift_reg_nor> (architecture <arc>) from library <work>.
+
+Elaborating entity <nor_n> (architecture <behave>) with generics from library <work>.
+
+Elaborating entity <xor_reg> (architecture <BEHAVIORAL>) with generics from library <work>.
+
+Elaborating entity <shift_reg_xor> (architecture <arc>) from library <work>.
+
+Elaborating entity <xor_n> (architecture <behave>) with generics from library <work>.
+
+Elaborating entity <xnor_reg> (architecture <behavioral>) with generics from library <work>.
+
+Elaborating entity <shift_reg_xnor> (architecture <arc>) from library <work>.
+
+Elaborating entity <xnor_n> (architecture <behave>) with generics from library <work>.
+
+Elaborating entity <not_reg> (architecture <behavioral>) with generics from library <work>.
+
+Elaborating entity <shift_reg_not> (architecture <arc>) from library <work>.
+
+Elaborating entity <not_n> (architecture <behave>) with generics from library <work>.
+
+Elaborating entity <sll_reg> (architecture <behavioral>) with generics from library <work>.
+
+Elaborating entity <shift_reg_sll> (architecture <arc>) from library <work>.
+
+Elaborating entity <sll_n> (architecture <behave>) with generics from library <work>.
+
+Elaborating entity <srl_reg> (architecture <behavioral>) with generics from library <work>.
+
+Elaborating entity <shift_reg_srl> (architecture <arc>) from library <work>.
+
+Elaborating entity <srl_n> (architecture <behave>) with generics from library <work>.
+
+Elaborating entity <sla_reg> (architecture <behavioral>) with generics from library <work>.
+
+Elaborating entity <shift_reg_sla> (architecture <arc>) from library <work>.
+
+Elaborating entity <sla_n> (architecture <behave>) with generics from library <work>.
+
+Elaborating entity <sra_reg> (architecture <behavioral>) with generics from library <work>.
+
+Elaborating entity <shift_reg_sra> (architecture <arc>) from library <work>.
+
+Elaborating entity <sra_n> (architecture <behave>) with generics from library <work>.
+
+Elaborating entity <ror_reg> (architecture <behavioral>) with generics from library <work>.
+
+Elaborating entity <shift_reg_ror> (architecture <arc>) from library <work>.
+
+Elaborating entity <ror_n> (architecture <behave>) with generics from library <work>.
+
+Elaborating entity <rol_reg> (architecture <behavioral>) with generics from library <work>.
+
+Elaborating entity <shift_reg_rol> (architecture <arc>) from library <work>.
+
+Elaborating entity <rol_n> (architecture <behave>) with generics from library <work>.
+
+Elaborating entity <fadd_reg> (architecture <behavioral>) with generics from library <work>.
+
+Elaborating entity <shift_reg_fadd> (architecture <arc>) from library <work>.
+
+Elaborating entity <fp_add> (architecture <fp_add_a>) from library <work>.
+
+Elaborating entity <fsub_reg> (architecture <behavioral>) with generics from library <work>.
+
+Elaborating entity <shift_reg_fsub> (architecture <arc>) from library <work>.
+
+Elaborating entity <fp_sub> (architecture <fp_sub_a>) from library <work>.
+
+Elaborating entity <fmult_reg> (architecture <behavioral>) with generics from library <work>.
+
+Elaborating entity <shift_reg_fmult> (architecture <arc>) from library <work>.
+
+Elaborating entity <fp_mult> (architecture <fp_mult_a>) from library <work>.
+
+Elaborating entity <and_reg> (architecture <behavioral>) with generics from library <work>.
+
+Elaborating entity <shift_reg_and> (architecture <arc>) from library <work>.
+
+Elaborating entity <and_n> (architecture <behave>) with generics from library <work>.
+
+Elaborating entity <fdiv_reg> (architecture <behavioral>) with generics from library <work>.
+
+Elaborating entity <shift_reg_fdiv> (architecture <arc>) from library <work>.
+
+Elaborating entity <fp_div> (architecture <fp_div_a>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <AlU_EXPERIMENT_32>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\alu\ALU_EXPERIMENT.vhd".
+        data_width = 32
+INFO:Xst:3210 - "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\alu\ALU_EXPERIMENT.vhd" line 404: Output port <full> of the instance <PM_FIFO_32_16_A> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\alu\ALU_EXPERIMENT.vhd" line 407: Output port <full> of the instance <PM_FIFO_32_16_B> is unconnected or connected to loadless signal.
+    Found 64-bit register for signal <output>.
+    Found 18-bit register for signal <in_ready>.
+    Summary:
+	inferred  82 D-type flip-flop(s).
+Unit <AlU_EXPERIMENT_32> synthesized.
+
+Synthesizing Unit <add_sub_reg>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\add_sub_reg.vhd".
+        bits = 32
+    Summary:
+	no macro.
+Unit <add_sub_reg> synthesized.
+
+Synthesizing Unit <shift_reg_add>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_add.vhd".
+    Found 1-bit register for signal <reg_0>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <shift_reg_add> synthesized.
+
+Synthesizing Unit <add_sub_n>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\operators\arithmetic\integer\add_sub_n.vhd".
+        bits = 32
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 33-bit adder for signal <Result> created at line 36.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <add_sub_n> synthesized.
+
+Synthesizing Unit <mult_reg>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\mult_reg.vhd".
+        bits = 32
+    Summary:
+	no macro.
+Unit <mult_reg> synthesized.
+
+Synthesizing Unit <shift_reg_mult>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_mult.vhd".
+    Found 1-bit register for signal <reg<6>>.
+    Found 1-bit register for signal <reg<5>>.
+    Found 1-bit register for signal <reg<4>>.
+    Found 1-bit register for signal <reg<3>>.
+    Found 1-bit register for signal <reg<2>>.
+    Found 1-bit register for signal <reg<1>>.
+    Found 1-bit register for signal <reg<0>>.
+    Summary:
+	inferred   7 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <shift_reg_mult> synthesized.
+
+Synthesizing Unit <or_reg>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\or_reg.vhd".
+        bits = 32
+    Summary:
+	no macro.
+Unit <or_reg> synthesized.
+
+Synthesizing Unit <shift_reg_or>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_or.vhd".
+    Found 1-bit register for signal <reg_0>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <shift_reg_or> synthesized.
+
+Synthesizing Unit <or_n>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\operators\logical\or_n.vhd".
+        bits = 32
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <or_n> synthesized.
+
+Synthesizing Unit <nor_reg>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\nor_reg.vhd".
+        bits = 32
+    Summary:
+	no macro.
+Unit <nor_reg> synthesized.
+
+Synthesizing Unit <shift_reg_nor>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_nor.vhd".
+    Found 1-bit register for signal <reg_0>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <shift_reg_nor> synthesized.
+
+Synthesizing Unit <nor_n>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\operators\logical\nor_n.vhd".
+        bits = 32
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <nor_n> synthesized.
+
+Synthesizing Unit <xor_reg>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\xor_reg.vhd".
+        bits = 32
+    Summary:
+	no macro.
+Unit <xor_reg> synthesized.
+
+Synthesizing Unit <shift_reg_xor>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_xor.vhd".
+    Found 1-bit register for signal <reg_0>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <shift_reg_xor> synthesized.
+
+Synthesizing Unit <xor_n>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\operators\logical\xor_n.vhd".
+        bits = 32
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+Unit <xor_n> synthesized.
+
+Synthesizing Unit <xnor_reg>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\xnor_reg.vhd".
+        bits = 32
+    Summary:
+	no macro.
+Unit <xnor_reg> synthesized.
+
+Synthesizing Unit <shift_reg_xnor>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_xnor.vhd".
+    Found 1-bit register for signal <reg_0>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <shift_reg_xnor> synthesized.
+
+Synthesizing Unit <xnor_n>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\operators\logical\xnor_n.vhd".
+        bits = 32
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+Unit <xnor_n> synthesized.
+
+Synthesizing Unit <not_reg>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\not_reg.vhd".
+        bits = 32
+    Summary:
+	no macro.
+Unit <not_reg> synthesized.
+
+Synthesizing Unit <shift_reg_not>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_not.vhd".
+    Found 1-bit register for signal <reg_0>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <shift_reg_not> synthesized.
+
+Synthesizing Unit <not_n>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\operators\logical\not_n.vhd".
+        bits = 32
+WARNING:Xst:647 - Input <B> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <not_n> synthesized.
+
+Synthesizing Unit <sll_reg>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\sll_reg.vhd".
+        bits = 32
+    Summary:
+	no macro.
+Unit <sll_reg> synthesized.
+
+Synthesizing Unit <shift_reg_sll>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_sll.vhd".
+    Found 1-bit register for signal <reg<1>>.
+    Found 1-bit register for signal <reg<0>>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <shift_reg_sll> synthesized.
+
+Synthesizing Unit <sll_n>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\operators\logical\sll_n.vhd".
+        bits = 32
+WARNING:Xst:647 - Input <B<31:31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit shifter logical left for signal <Result> created at line 12
+    Summary:
+	inferred   1 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <sll_n> synthesized.
+
+Synthesizing Unit <srl_reg>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\srl_reg.vhd".
+        bits = 32
+    Summary:
+	no macro.
+Unit <srl_reg> synthesized.
+
+Synthesizing Unit <shift_reg_srl>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_srl.vhd".
+    Found 1-bit register for signal <reg<1>>.
+    Found 1-bit register for signal <reg<0>>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <shift_reg_srl> synthesized.
+
+Synthesizing Unit <srl_n>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\operators\logical\srl_n.vhd".
+        bits = 32
+WARNING:Xst:647 - Input <B<31:31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit shifter logical right for signal <Result> created at line 13
+    Summary:
+	inferred   1 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <srl_n> synthesized.
+
+Synthesizing Unit <sla_reg>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\sla_reg.vhd".
+        bits = 32
+    Summary:
+	no macro.
+Unit <sla_reg> synthesized.
+
+Synthesizing Unit <shift_reg_sla>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_sla.vhd".
+    Found 1-bit register for signal <reg_0>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <shift_reg_sla> synthesized.
+
+Synthesizing Unit <sla_n>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\operators\arithmetic\integer\sla_n.vhd".
+        bits = 32
+WARNING:Xst:647 - Input <B<31:31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit shifter logical left for signal <Result> created at line 12
+    Summary:
+	inferred   1 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <sla_n> synthesized.
+
+Synthesizing Unit <sra_reg>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\sra_reg.vhd".
+        bits = 32
+    Summary:
+	no macro.
+Unit <sra_reg> synthesized.
+
+Synthesizing Unit <shift_reg_sra>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_sra.vhd".
+    Found 1-bit register for signal <reg_0>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <shift_reg_sra> synthesized.
+
+Synthesizing Unit <sra_n>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\operators\arithmetic\integer\sra_n.vhd".
+        bits = 32
+WARNING:Xst:647 - Input <B<31:31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit shifter arithmetic right for signal <Result> created at line 13
+    Summary:
+	inferred   1 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <sra_n> synthesized.
+
+Synthesizing Unit <ror_reg>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\ror_reg.vhd".
+        bits = 32
+    Summary:
+	no macro.
+Unit <ror_reg> synthesized.
+
+Synthesizing Unit <shift_reg_ror>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_ror.vhd".
+    Found 1-bit register for signal <reg<1>>.
+    Found 1-bit register for signal <reg<0>>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <shift_reg_ror> synthesized.
+
+Synthesizing Unit <ror_n>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\operators\logical\ror_n.vhd".
+        bits = 32
+WARNING:Xst:647 - Input <B<31:31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit shifter rotate right for signal <Result> created at line 13
+    Summary:
+	inferred   1 Combinational logic shifter(s).
+Unit <ror_n> synthesized.
+
+Synthesizing Unit <rol_reg>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\rol_reg.vhd".
+        bits = 32
+    Summary:
+	no macro.
+Unit <rol_reg> synthesized.
+
+Synthesizing Unit <shift_reg_rol>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_rol.vhd".
+    Found 1-bit register for signal <reg_0>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <shift_reg_rol> synthesized.
+
+Synthesizing Unit <rol_n>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\operators\logical\rol_n.vhd".
+        bits = 32
+WARNING:Xst:647 - Input <B<31:31>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit shifter rotate left for signal <Result> created at line 13
+    Summary:
+	inferred   1 Combinational logic shifter(s).
+Unit <rol_n> synthesized.
+
+Synthesizing Unit <fadd_reg>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\fadd_reg.vhd".
+        bits = 32
+    Summary:
+	no macro.
+Unit <fadd_reg> synthesized.
+
+Synthesizing Unit <shift_reg_fadd>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_fadd.vhd".
+WARNING:Xst:737 - Found 1-bit latch for signal <reg<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <reg<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   7 Latch(s).
+	inferred  15 Multiplexer(s).
+Unit <shift_reg_fadd> synthesized.
+
+Synthesizing Unit <fsub_reg>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\fsub_reg.vhd".
+        bits = 32
+    Summary:
+	no macro.
+Unit <fsub_reg> synthesized.
+
+Synthesizing Unit <shift_reg_fsub>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_fsub.vhd".
+    Found 1-bit register for signal <reg<14>>.
+    Found 1-bit register for signal <reg<13>>.
+    Found 1-bit register for signal <reg<12>>.
+    Found 1-bit register for signal <reg<11>>.
+    Found 1-bit register for signal <reg<10>>.
+    Found 1-bit register for signal <reg<9>>.
+    Found 1-bit register for signal <reg<8>>.
+    Found 1-bit register for signal <reg<7>>.
+    Found 1-bit register for signal <reg<6>>.
+    Found 1-bit register for signal <reg<5>>.
+    Found 1-bit register for signal <reg<4>>.
+    Found 1-bit register for signal <reg<3>>.
+    Found 1-bit register for signal <reg<2>>.
+    Found 1-bit register for signal <reg<1>>.
+    Found 1-bit register for signal <reg<0>>.
+    Summary:
+	inferred  15 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <shift_reg_fsub> synthesized.
+
+Synthesizing Unit <fmult_reg>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\fmult_reg.vhd".
+        bits = 32
+    Summary:
+	no macro.
+Unit <fmult_reg> synthesized.
+
+Synthesizing Unit <shift_reg_fmult>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_fmult.vhd".
+    Found 1-bit register for signal <reg<9>>.
+    Found 1-bit register for signal <reg<8>>.
+    Found 1-bit register for signal <reg<7>>.
+    Found 1-bit register for signal <reg<6>>.
+    Found 1-bit register for signal <reg<5>>.
+    Found 1-bit register for signal <reg<4>>.
+    Found 1-bit register for signal <reg<3>>.
+    Found 1-bit register for signal <reg<2>>.
+    Found 1-bit register for signal <reg<1>>.
+    Found 1-bit register for signal <reg<0>>.
+    Summary:
+	inferred  10 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <shift_reg_fmult> synthesized.
+
+Synthesizing Unit <and_reg>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\and_reg.vhd".
+        bits = 32
+    Summary:
+	no macro.
+Unit <and_reg> synthesized.
+
+Synthesizing Unit <shift_reg_and>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_and.vhd".
+    Found 1-bit register for signal <reg_0>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <shift_reg_and> synthesized.
+
+Synthesizing Unit <and_n>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\operators\logical\and_n.vhd".
+        bits = 32
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <and_n> synthesized.
+
+Synthesizing Unit <fdiv_reg>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\composite_operators_registers\fdiv_reg.vhd".
+        bits = 32
+    Summary:
+	no macro.
+Unit <fdiv_reg> synthesized.
+
+Synthesizing Unit <shift_reg_fdiv>.
+    Related source file is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\registers\shift_reg_fdiv.vhd".
+    Found 1-bit register for signal <reg<8>>.
+    Found 1-bit register for signal <reg<7>>.
+    Found 1-bit register for signal <reg<6>>.
+    Found 1-bit register for signal <reg<5>>.
+    Found 1-bit register for signal <reg<4>>.
+    Found 1-bit register for signal <reg<3>>.
+    Found 1-bit register for signal <reg<2>>.
+    Found 1-bit register for signal <reg<1>>.
+    Found 1-bit register for signal <reg<0>>.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <shift_reg_fdiv> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 33-bit adder                                          : 1
+# Registers                                            : 59
+ 1-bit register                                        : 57
+ 18-bit register                                       : 1
+ 64-bit register                                       : 1
+# Latches                                              : 7
+ 1-bit latch                                           : 7
+# Multiplexers                                         : 36
+ 1-bit 2-to-1 multiplexer                              : 25
+ 10-bit 2-to-1 multiplexer                             : 1
+ 15-bit 2-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 3
+ 32-bit 2-to-1 multiplexer                             : 4
+ 7-bit 2-to-1 multiplexer                              : 1
+ 9-bit 2-to-1 multiplexer                              : 1
+# Logic shifters                                       : 6
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 2
+ 32-bit shifter logical right                          : 1
+ 32-bit shifter rotate left                            : 1
+ 32-bit shifter rotate right                           : 1
+# Xors                                                 : 2
+ 32-bit xor2                                           : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <fifo_32.ngc>.
+Reading core <mult.ngc>.
+Reading Secure Unit <blk00000001>.
+Reading core <ipcore_dir/fp_add.ngc>.
+Reading core <ipcore_dir/fp_sub.ngc>.
+Reading core <ipcore_dir/fp_mult.ngc>.
+Reading core <ipcore_dir/fp_div.ngc>.
+Loading core <fifo_32> for timing and area information for instance <PM_FIFO_32_16_A>.
+Loading core <fifo_32> for timing and area information for instance <PM_FIFO_32_16_B>.
+Loading core <mult> for timing and area information for instance <PM_MULT>.
+Loading core <fp_add> for timing and area information for instance <PM_FADD>.
+Loading core <fp_sub> for timing and area information for instance <PM_FSUB>.
+Loading core <fp_mult> for timing and area information for instance <PM_FMULT>.
+Loading core <fp_div> for timing and area information for instance <PM_DIV>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 33-bit adder                                          : 1
+# Registers                                            : 139
+ Flip-Flops                                            : 139
+# Multiplexers                                         : 36
+ 1-bit 2-to-1 multiplexer                              : 25
+ 10-bit 2-to-1 multiplexer                             : 1
+ 15-bit 2-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 3
+ 32-bit 2-to-1 multiplexer                             : 4
+ 7-bit 2-to-1 multiplexer                              : 1
+ 9-bit 2-to-1 multiplexer                              : 1
+# Logic shifters                                       : 6
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 2
+ 32-bit shifter logical right                          : 1
+ 32-bit shifter rotate left                            : 1
+ 32-bit shifter rotate right                           : 1
+# Xors                                                 : 2
+ 32-bit xor2                                           : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:3001 - This design contains one or more registers or latches with an active
+   asynchronous set and asynchronous reset. While this circuit can be built,
+   it creates a sub-optimal implementation in terms of area, power and
+   performance. For a more optimal implementation Xilinx highly recommends
+   one of the following:
+
+          1) Remove either the set or reset from all registers and latches if
+             not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Virtex6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    PM_AND/PM_ADD_SUB_READY_SIGNAL/reg_0 in unit <AlU_EXPERIMENT_32>
+    PM_ROL/PM_ROL_READY_SIGNAL/reg_0 in unit <AlU_EXPERIMENT_32>
+    PM_ROR/PM_ROR_READY_SIGNAL/reg_1 in unit <AlU_EXPERIMENT_32>
+    PM_ROR/PM_ROR_READY_SIGNAL/reg_0 in unit <AlU_EXPERIMENT_32>
+    PM_SRA/PM_NOR_READY_SIGNAL/reg_0 in unit <AlU_EXPERIMENT_32>
+    PM_SLA/PM_SLA_READY_SIGNAL/reg_0 in unit <AlU_EXPERIMENT_32>
+    PM_SRL/PM_NOR_READY_SIGNAL/reg_1 in unit <AlU_EXPERIMENT_32>
+    PM_SRL/PM_NOR_READY_SIGNAL/reg_0 in unit <AlU_EXPERIMENT_32>
+    PM_SLL/PM_NOR_READY_SIGNAL/reg_1 in unit <AlU_EXPERIMENT_32>
+    PM_SLL/PM_NOR_READY_SIGNAL/reg_0 in unit <AlU_EXPERIMENT_32>
+    PM_NOT/PM_NOT_READY_SIGNAL/reg_0 in unit <AlU_EXPERIMENT_32>
+    PM_XNOR/PM_NOR_READY_SIGNAL/reg_0 in unit <AlU_EXPERIMENT_32>
+    PM_XOR/PM_XOR_READY_SIGNAL/reg_0 in unit <AlU_EXPERIMENT_32>
+    PM_NOR/PM_NOR_READY_SIGNAL/reg_0 in unit <AlU_EXPERIMENT_32>
+    PM_OR/PM_OR_READY_SIGNAL/reg_0 in unit <AlU_EXPERIMENT_32>
+    PM_add_sub/PM_ADD_SUB_READY_SIGNAL/reg_0 in unit <AlU_EXPERIMENT_32>
+    reg_0 in unit <shift_reg_fdiv>
+    reg_1 in unit <shift_reg_fdiv>
+    reg_2 in unit <shift_reg_fdiv>
+    reg_3 in unit <shift_reg_fdiv>
+    reg_4 in unit <shift_reg_fdiv>
+    reg_5 in unit <shift_reg_fdiv>
+    reg_6 in unit <shift_reg_fdiv>
+    reg_7 in unit <shift_reg_fdiv>
+    reg_8 in unit <shift_reg_fdiv>
+    reg_0 in unit <shift_reg_fmult>
+    reg_1 in unit <shift_reg_fmult>
+    reg_2 in unit <shift_reg_fmult>
+    reg_3 in unit <shift_reg_fmult>
+    reg_4 in unit <shift_reg_fmult>
+    reg_5 in unit <shift_reg_fmult>
+    reg_6 in unit <shift_reg_fmult>
+    reg_7 in unit <shift_reg_fmult>
+    reg_8 in unit <shift_reg_fmult>
+    reg_9 in unit <shift_reg_fmult>
+    reg_0 in unit <shift_reg_fsub>
+    reg_1 in unit <shift_reg_fsub>
+    reg_2 in unit <shift_reg_fsub>
+    reg_3 in unit <shift_reg_fsub>
+    reg_4 in unit <shift_reg_fsub>
+    reg_5 in unit <shift_reg_fsub>
+    reg_6 in unit <shift_reg_fsub>
+    reg_7 in unit <shift_reg_fsub>
+    reg_8 in unit <shift_reg_fsub>
+    reg_9 in unit <shift_reg_fsub>
+    reg_10 in unit <shift_reg_fsub>
+    reg_11 in unit <shift_reg_fsub>
+    reg_12 in unit <shift_reg_fsub>
+    reg_13 in unit <shift_reg_fsub>
+    reg_14 in unit <shift_reg_fsub>
+    reg_0 in unit <shift_reg_mult>
+    reg_1 in unit <shift_reg_mult>
+    reg_2 in unit <shift_reg_mult>
+    reg_3 in unit <shift_reg_mult>
+    reg_4 in unit <shift_reg_mult>
+    reg_5 in unit <shift_reg_mult>
+    reg_6 in unit <shift_reg_mult>
+
+
+Optimizing unit <AlU_EXPERIMENT_32> ...
+
+Optimizing unit <shift_reg_mult> ...
+
+Optimizing unit <shift_reg_fadd> ...
+
+Optimizing unit <shift_reg_fsub> ...
+
+Optimizing unit <shift_reg_fmult> ...
+
+Optimizing unit <shift_reg_fdiv> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block AlU_EXPERIMENT_32, actual ratio is 2.
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <PM_FIFO_32_16_B> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <PM_FIFO_32_16_B> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <PM_FIFO_32_16_B> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <PM_FIFO_32_16_A> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <PM_FIFO_32_16_A> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <PM_FIFO_32_16_A> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <blk000009de> in Unit <PM_FDIV/PM_DIV> is equivalent to the following FF/Latch : <blk00000d4d> 
+INFO:Xst:2260 - The FF/Latch <blk000009c5> in Unit <PM_FDIV/PM_DIV> is equivalent to the following FF/Latch : <blk00000d4e> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <PM_FIFO_32_16_B> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <PM_FIFO_32_16_B> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <PM_FIFO_32_16_B> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <PM_FIFO_32_16_A> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <PM_FIFO_32_16_A> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <PM_FIFO_32_16_A> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <blk000009de> in Unit <PM_FDIV/PM_DIV> is equivalent to the following FF/Latch : <blk00000d4d> 
+INFO:Xst:2260 - The FF/Latch <blk000009c5> in Unit <PM_FDIV/PM_DIV> is equivalent to the following FF/Latch : <blk00000d4e> 
+
+Final Macro Processing ...
+
+Processing Unit <AlU_EXPERIMENT_32> :
+	Found 7-bit shift register for signal <PM_MULT/PM_MULT_OUTPUT_READY_SIGNAL/reg_0>.
+	Found 15-bit shift register for signal <PM_FSUB/PM_FSUB_READY_SIGNAL/reg_0>.
+	Found 10-bit shift register for signal <PM_FMULT/PM_FMULT_READY_SIGNAL/reg_0>.
+	Found 9-bit shift register for signal <PM_FDIV/PM_DIV_READY_SIGNAL/reg_0>.
+Unit <AlU_EXPERIMENT_32> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 98
+ Flip-Flops                                            : 98
+# Shift Registers                                      : 4
+ 10-bit shift register                                 : 1
+ 15-bit shift register                                 : 1
+ 7-bit shift register                                  : 1
+ 9-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : AlU_EXPERIMENT_32.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 9844
+#      GND                         : 10
+#      INV                         : 19
+#      LUT1                        : 65
+#      LUT2                        : 905
+#      LUT3                        : 1071
+#      LUT4                        : 1083
+#      LUT5                        : 207
+#      LUT6                        : 651
+#      MULT_AND                    : 753
+#      MUXCY                       : 2562
+#      MUXF7                       : 28
+#      MUXF8                       : 2
+#      VCC                         : 9
+#      XORCY                       : 2479
+# FlipFlops/Latches                : 3454
+#      FD                          : 557
+#      FDC                         : 22
+#      FDCE                        : 92
+#      FDE                         : 2432
+#      FDP                         : 26
+#      FDPE                        : 2
+#      FDRE                        : 316
+#      LD                          : 7
+# RAMS                             : 2
+#      RAMB36E1                    : 2
+# Shift Registers                  : 166
+#      SRL16E                      : 29
+#      SRLC16E                     : 117
+#      SRLC32E                     : 20
+# Clock Buffers                    : 1
+#      BUFG                        : 1
+# IO Buffers                       : 140
+#      IBUF                        : 75
+#      OBUF                        : 65
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6vlx240tff1156-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            3454  out of  301440     1%  
+ Number of Slice LUTs:                 4167  out of  150720     2%  
+    Number used as Logic:              4001  out of  150720     2%  
+    Number used as Memory:              166  out of  58400     0%  
+       Number used as SRL:              166
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   5391
+   Number with an unused Flip Flop:    1937  out of   5391    35%  
+   Number with an unused LUT:          1224  out of   5391    22%  
+   Number of fully used LUT-FF pairs:  2230  out of   5391    41%  
+   Number of unique control sets:        41
+
+IO Utilization: 
+ Number of IOs:                         140
+ Number of bonded IOBs:                 140  out of    600    23%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                2  out of    416     0%  
+    Number using Block RAM only:          2
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+---------------------------------------------------------------------------------------------------------+--------------------------------------------+-------+
+Clock Signal                                                                                             | Clock buffer(FF name)                      | Load  |
+---------------------------------------------------------------------------------------------------------+--------------------------------------------+-------+
+clk                                                                                                      | IBUF+BUFG                                  | 3615  |
+PM_FADD/PM_FADD_READY_SIGNAL/rst_clk_MUX_2404_o(PM_FADD/PM_FADD_READY_SIGNAL/Mmux_rst_clk_MUX_2404_o11:O)| NONE(*)(PM_FADD/PM_FADD_READY_SIGNAL/reg_0)| 7     |
+---------------------------------------------------------------------------------------------------------+--------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                                                                                                                                                                                        | Buffer(FF name)                                                                                                                                                                                             | Load  |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+PM_FIFO_32_16_A/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/DBITERR(PM_FIFO_32_16_A/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND:G)| NONE(PM_FIFO_32_16_A/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram)| 2     |
+PM_FIFO_32_16_B/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/DBITERR(PM_FIFO_32_16_B/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND:G)| NONE(PM_FIFO_32_16_B/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram)| 2     |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 7.244ns (Maximum Frequency: 138.041MHz)
+   Minimum input arrival time before clock: 5.776ns
+   Maximum output required time after clock: 2.182ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 7.244ns (frequency: 138.041MHz)
+  Total number of paths / destination ports: 11881715941 / 4284
+-------------------------------------------------------------------------
+Delay:               7.244ns (Levels of Logic = 74)
+  Source:            PM_FIFO_32_16_A/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_0 (FF)
+  Destination:       sec_inst (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: PM_FIFO_32_16_A/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_0 to sec_inst
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            65   0.375   0.798  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/dout_i_0 (dout<0>)
+     end scope: 'PM_FIFO_32_16_A:dout<0>'
+     begin scope: 'PM_MULT/PM_MULT:a<0>'
+     begin scope: 'PM_MULT/PM_MULT/blk00000001:A<0>'
+     SEC:in->out           1   0.068   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.290   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           0   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.239   0.491  sec_inst (sec_net)
+     SEC:in->out           1   0.068   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.290   0.000  sec_inst (sec_net)
+     SEC:in->out           0   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.239   0.491  sec_inst (sec_net)
+     SEC:in->out           1   0.068   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.290   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.020   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.020   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.020   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.239   0.491  sec_inst (sec_net)
+     SEC:in->out           1   0.068   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.290   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.020   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.020   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.020   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.020   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.020   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.020   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.020   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.020   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.239   0.491  sec_inst (sec_net)
+     SEC:in->out           1   0.068   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.290   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.020   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.020   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           0   0.019   0.000  sec_inst (sec_net)
+     SEC:in->out           1   0.239   0.000  sec_inst (sec_net)
+     SEC:in                    0.011          sec_inst
+    ----------------------------------------
+    Total                      7.244ns (4.482ns logic, 2.762ns route)
+                                       (61.9% logic, 38.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'PM_FADD/PM_FADD_READY_SIGNAL/rst_clk_MUX_2404_o'
+  Clock period: 0.952ns (frequency: 1050.420MHz)
+  Total number of paths / destination ports: 13 / 7
+-------------------------------------------------------------------------
+Delay:               0.952ns (Levels of Logic = 1)
+  Source:            PM_FADD/PM_FADD_READY_SIGNAL/reg_1 (LATCH)
+  Destination:       PM_FADD/PM_FADD_READY_SIGNAL/reg_0 (LATCH)
+  Source Clock:      PM_FADD/PM_FADD_READY_SIGNAL/rst_clk_MUX_2404_o falling
+  Destination Clock: PM_FADD/PM_FADD_READY_SIGNAL/rst_clk_MUX_2404_o falling
+
+  Data Path: PM_FADD/PM_FADD_READY_SIGNAL/reg_1 to PM_FADD/PM_FADD_READY_SIGNAL/reg_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               2   0.387   0.497  PM_FADD/PM_FADD_READY_SIGNAL/reg_1 (PM_FADD/PM_FADD_READY_SIGNAL/reg_1)
+     LUT4:I2->O            1   0.068   0.000  PM_FADD/PM_FADD_READY_SIGNAL/Mmux_reg[8]_reg[8]_MUX_2430_o11 (PM_FADD/PM_FADD_READY_SIGNAL/reg[8]_reg[8]_MUX_2430_o)
+     LD:D                     -0.047          PM_FADD/PM_FADD_READY_SIGNAL/reg_0
+    ----------------------------------------
+    Total                      0.952ns (0.455ns logic, 0.497ns route)
+                                       (47.8% logic, 52.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 6568 / 246
+-------------------------------------------------------------------------
+Offset:              5.776ns (Levels of Logic = 9)
+  Source:            Operation<4> (PAD)
+  Destination:       output_13 (FF)
+  Destination Clock: clk rising
+
+  Data Path: Operation<4> to output_13
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   0.003   0.671  Operation_4_IBUF (Operation_4_IBUF)
+     LUT4:I0->O           66   0.068   0.651  out11 (out1)
+     LUT5:I3->O           33   0.068   0.928  GND_8_o_Operation[7]_equal_9_o<7>1 (GND_8_o_Operation[7]_equal_9_o)
+     LUT6:I1->O            1   0.068   0.417  PWR_8_o_GND_8_o_select_21_OUT<50>3 (PWR_8_o_GND_8_o_select_21_OUT<50>3)
+     LUT6:I5->O            1   0.068   0.581  PWR_8_o_GND_8_o_select_21_OUT<50>5 (PWR_8_o_GND_8_o_select_21_OUT<50>5)
+     LUT6:I3->O            1   0.068   0.775  PWR_8_o_GND_8_o_select_21_OUT<50>7 (PWR_8_o_GND_8_o_select_21_OUT<50>7)
+     LUT6:I1->O            1   0.068   0.778  PWR_8_o_GND_8_o_select_21_OUT<50>8 (PWR_8_o_GND_8_o_select_21_OUT<50>8)
+     LUT6:I0->O            1   0.068   0.417  PWR_8_o_GND_8_o_select_21_OUT<50>10_SW0 (N34)
+     LUT6:I5->O            1   0.068   0.000  PWR_8_o_GND_8_o_select_21_OUT<50>10 (PWR_8_o_GND_8_o_select_21_OUT<14>)
+     FDE:D                     0.011          output_14
+    ----------------------------------------
+    Total                      5.776ns (0.558ns logic, 5.218ns route)
+                                       (9.7% logic, 90.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'PM_FADD/PM_FADD_READY_SIGNAL/rst_clk_MUX_2404_o'
+  Total number of paths / destination ports: 14 / 7
+-------------------------------------------------------------------------
+Offset:              0.866ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       PM_FADD/PM_FADD_READY_SIGNAL/reg_0 (LATCH)
+  Destination Clock: PM_FADD/PM_FADD_READY_SIGNAL/rst_clk_MUX_2404_o falling
+
+  Data Path: rst to PM_FADD/PM_FADD_READY_SIGNAL/reg_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            54   0.003   0.795  rst_IBUF (rst_IBUF)
+     LUT4:I0->O            1   0.068   0.000  PM_FADD/PM_FADD_READY_SIGNAL/Mmux_reg[8]_reg[8]_MUX_2430_o11 (PM_FADD/PM_FADD_READY_SIGNAL/reg[8]_reg[8]_MUX_2430_o)
+     LD:D                     -0.047          PM_FADD/PM_FADD_READY_SIGNAL/reg_0
+    ----------------------------------------
+    Total                      0.866ns (0.071ns logic, 0.795ns route)
+                                       (8.2% logic, 91.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 81 / 65
+-------------------------------------------------------------------------
+Offset:              2.182ns (Levels of Logic = 3)
+  Source:            PM_OR/PM_OR_READY_SIGNAL/reg_0 (FF)
+  Destination:       output_ready (PAD)
+  Source Clock:      clk rising
+
+  Data Path: PM_OR/PM_OR_READY_SIGNAL/reg_0 to output_ready
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.375   0.778  PM_OR/PM_OR_READY_SIGNAL/reg_0 (PM_OR/PM_OR_READY_SIGNAL/reg_0)
+     LUT6:I0->O            1   0.068   0.491  output_ready<0>1 (output_ready<0>)
+     LUT5:I3->O            1   0.068   0.399  output_ready<0>4 (output_ready_OBUF)
+     OBUF:I->O                 0.003          output_ready_OBUF (output_ready)
+    ----------------------------------------
+    Total                      2.182ns (0.514ns logic, 1.668ns route)
+                                       (23.6% logic, 76.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'PM_FADD/PM_FADD_READY_SIGNAL/rst_clk_MUX_2404_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.638ns (Levels of Logic = 2)
+  Source:            PM_FADD/PM_FADD_READY_SIGNAL/reg_0 (LATCH)
+  Destination:       output_ready (PAD)
+  Source Clock:      PM_FADD/PM_FADD_READY_SIGNAL/rst_clk_MUX_2404_o falling
+
+  Data Path: PM_FADD/PM_FADD_READY_SIGNAL/reg_0 to output_ready
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               2   0.387   0.781  PM_FADD/PM_FADD_READY_SIGNAL/reg_0 (PM_FADD/PM_FADD_READY_SIGNAL/reg_0)
+     LUT5:I0->O            1   0.068   0.399  output_ready<0>4 (output_ready_OBUF)
+     OBUF:I->O                 0.003          output_ready_OBUF (output_ready)
+    ----------------------------------------
+    Total                      1.638ns (0.458ns logic, 1.180ns route)
+                                       (28.0% logic, 72.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock PM_FADD/PM_FADD_READY_SIGNAL/rst_clk_MUX_2404_o
+-----------------------------------------------+---------+---------+---------+---------+
+                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------------------+---------+---------+---------+---------+
+PM_FADD/PM_FADD_READY_SIGNAL/rst_clk_MUX_2404_o|         |         |    0.952|         |
+clk                                            |         |         |    0.940|         |
+-----------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    7.244|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 40.00 secs
+Total CPU time to Xst completion: 39.85 secs
+ 
+--> 
+
+Total memory usage is 349148 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   28 (   0 filtered)
+Number of infos    :   19 (   0 filtered)
+

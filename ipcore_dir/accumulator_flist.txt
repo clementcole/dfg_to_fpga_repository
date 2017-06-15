@@ -1,0 +1,17 @@
+# Output products list for <accumulator>
+_xmsgs\pn_parser.xmsgs
+accumulator.asy
+accumulator.gise
+accumulator.ngc
+accumulator.sym
+accumulator.vhd
+accumulator.vho
+accumulator.xco
+accumulator.xise
+accumulator\doc\c_accum_v11_0_readme.txt
+accumulator\doc\c_accum_v11_0_vinfo.html
+accumulator\doc\ds213_accum.pdf
+accumulator_flist.txt
+accumulator_xmdf.tcl
+core_resources.txt
+gui_latency.txt
