@@ -128,16 +128,24 @@ signal m_axis_result_tvalid : std_logic;
  -- 	);
 --	end component;
 
-	component add_sub_reg is
-		generic ( bits 	: integer  := 32);
-		port (
-				A				: in signed(31 downto 0);
-				B				: in signed(31 downto 0);
-				clk				:       in std_logic;
-				rst 			:       in std_logic;
-				input_ready : in std_logic;
-				output_ready : out std_logic;
-			Result 	: out std_logic_vector(32 downto 0));
+	--component add_sub_reg is
+	--	generic ( bits 	: integer  := 32);
+	--	port (
+	--			A				: in signed(31 downto 0);
+	--			B				: in signed(31 downto 0);
+	--			clk				:       in std_logic;
+	--			rst 			:       in std_logic;
+	--			input_ready : in std_logic;
+	--			output_ready : out std_logic;
+	--		Result 	: out std_logic_vector(32 downto 0));
+	--end component;
+	component add_sub_n is 
+	generic ( bits   : integer :=  32);
+	port ( 
+			clk  : in std_logic; 
+			A    : in signed(31 downto 0);
+			B    : in signed(31 downto 0);
+			result : out std_logic_vector(32 downto 0));
 	end component;
 
 	component fp_add is
@@ -413,10 +421,11 @@ begin
 --	
 --Port mapping operator_register components	
 --			
-
-	PM_add_sub : add_sub_reg 
-		generic map ( bits => 32)
-		port map(A  => signed(inputA), B => signed(inputB), clk  => clk,  rst => rst,  input_ready => in_ready(0), output_ready => result_ready(0),  std_logic_vector(Result) => r_add_sub);
+	PM_add_sub : add_sub_n
+		port map(clk => clk, A => signed(A), B => signed(B), result => r_add_sub);
+	--PM_add_sub : add_sub_reg 
+	--	generic map ( bits => 32)
+	--	port map(A  => signed(inputA), B => signed(inputB), clk  => clk,  rst => rst,  input_ready => in_ready(0), output_ready => result_ready(0),  std_logic_vector(Result) => r_add_sub);
   
 	PM_MULT : mult_reg
 		generic map(bits => 32)
@@ -522,6 +531,7 @@ begin
 			when OPCODE_ADD_SUB => output(32 downto 0) <= r_add_sub; -- 00001
 				output(63 downto 33) <= (others => '0');
 				in_ready(0) <= input_ready;
+				result_ready(0) <= '1';
 				in_ready(17 downto 1) <= (others => '0');
 				
 				

@@ -60,20 +60,20 @@ constant OPCODE_ADD_SUB		:	std_logic_vector(7 downto 0)	:=	x"00";	--add/sub  = 0
 constant OPCODE_MULT		:	std_logic_vector(7 downto 0)	:=	x"01";	--MULT	  = TESTED
 constant OPCODE_DIV			:	std_logic_vector(7 downto 0)	:= 	x"02";	--DIV  = NOT TESTED
 constant OPCODE_OR			:	std_logic_vector(7 downto 0)	:= 	x"03";	--OR  = TESTED
-constant OPCODE_NOR			: 	std_logic_vector(7 downto 0)	:=	x"04";	--NOR = TESTED
-constant OPCODE_XOR			: 	std_logic_vector(7 downto 0)	:=	x"05";	--XOR  = TESTED
-constant OPCODE_XNOR		: 	std_logic_vector(7 downto 0)	:=	x"06";	--XNOR = TESTED 
-constant OPCODE_AND			:	std_logic_vector(7 downto 0)	:=	x"07";	--AND  = TESTED
-constant OPCODE_NOT			: 	std_logic_vector(7 downto 0)	:=	x"08";	--NOT  = TESTED
-constant OPCODE_SLA			: 	std_logic_vector(7 downto 0)	:=	x"09";	--SLA  = TESTED
-constant OPCODE_SRA			: 	std_logic_vector(7 downto 0)	:=	x"0A";	--SRA  = TESTED
-constant OPCODE_SLL			: 	std_logic_vector(7 downto 0)	:=	x"0B";	--SLL  = TESTED
-constant OPCODE_SRL			: 	std_logic_vector(7 downto 0)	:=	x"0C";	--SRL = TESTED
-constant OPCODE_ROR			:	std_logic_vector(7 downto 0)	:=  x"0D";	--ROR = TESTED
-constant OPCODE_ROL			:	std_logic_vector(7 downto 0)	:= 	x"0E";	--ROL = TESTED
-constant OPCODE_FADD		: 	std_logic_vector(7 downto 0)	:=	x"0F";	--FADD = TESTED
-constant OPCODE_FSUB		: 	std_logic_vector(7 downto 0)	:=	x"10";	--FSUB = TESTED
-constant OPCODE_FMULT		: 	std_logic_vector(7 downto 0)	:=	x"11";	--FMULT  = TESTED
+constant OPCODE_NOR			: 	std_logic_vector(7 downto 0)	:=	x"04";	--NOR = NOT TESTED
+constant OPCODE_XOR			: 	std_logic_vector(7 downto 0)	:=	x"05";	--XOR  = NOT  TESTED
+constant OPCODE_XNOR		: 	std_logic_vector(7 downto 0)	:=	x"06";	--XNOR = NOT TESTED 
+constant OPCODE_AND			:	std_logic_vector(7 downto 0)	:=	x"07";	--AND  = NOT TESTED
+constant OPCODE_NOT			: 	std_logic_vector(7 downto 0)	:=	x"08";	--NOT  = NOT TESTED
+constant OPCODE_SLA			: 	std_logic_vector(7 downto 0)	:=	x"09";	--SLA  = NOT TESTED
+constant OPCODE_SRA			: 	std_logic_vector(7 downto 0)	:=	x"0A";	--SRA  = NOT TESTED
+constant OPCODE_SLL			: 	std_logic_vector(7 downto 0)	:=	x"0B";	--SLL  = NOT TESTED
+constant OPCODE_SRL			: 	std_logic_vector(7 downto 0)	:=	x"0C";	--SRL = NOT TESTED
+constant OPCODE_ROR			:	std_logic_vector(7 downto 0)	:=  x"0D";	--ROR = NOT TESTED
+constant OPCODE_ROL			:	std_logic_vector(7 downto 0)	:= 	x"0E";	--ROL = NOT TESTED
+constant OPCODE_FADD		: 	std_logic_vector(7 downto 0)	:=	x"0F";	--FADD = NOT TESTED
+constant OPCODE_FSUB		: 	std_logic_vector(7 downto 0)	:=	x"10";	--FSUB = NOT TESTED
+constant OPCODE_FMULT		: 	std_logic_vector(7 downto 0)	:=	x"11";	--FMULT  = NOT TESTED
 constant OPCODE_FDIV		:   std_logic_vector(7 downto 0)    :=  x"12";	--FDIV = NOT YET
 --Later added opcodes
 constant OPCODE_GT			:	std_logic_vector(7 downto 0)	:=  x"13";	--GREATER THAN

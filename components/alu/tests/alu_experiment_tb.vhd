@@ -92,7 +92,7 @@ architecture testbench of ALU_EXPERIMENT_32_TB is
 			Operation <= data(71 downto 64);
 			A        <=  (data(63 downto 32));
 			B        <=  (data(31 downto 0));
-			wait for  5 * Period;
+			wait for  19 * Period;
 		end loop; 
 		wait;
 	end process;

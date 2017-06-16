@@ -22,9 +22,9 @@ architecture behave of xor_n is
 	begin
 		process(clk, A, B) is 
 		begin
-			--if (clk = '1' and clk'event) then
+			if (clk = '1')  then
 				Result <= A xor B;
-			--end if;
+			end if;
 		end process;
 		
 			
