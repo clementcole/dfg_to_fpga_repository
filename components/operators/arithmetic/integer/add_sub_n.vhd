@@ -7,7 +7,7 @@ library work;
 
 
 entity add_sub_n is
-	generic ( bits 	: integer);
+	generic ( bits 	: integer := 32);
 		port (	clk 			: in std_logic;
 				A				: in signed(31 downto 0);
 				B				: in signed(31 downto 0);
@@ -19,6 +19,7 @@ end entity add_sub_n;
 
 architecture behave of add_sub_n is 
 	signal output : signed(32 downto 0);
+	signal rst : std_logic_vector(32 downto 0);
 	signal out_rdy : std_logic;
 	--
 	-- Full adder component declaration here
@@ -30,12 +31,11 @@ architecture behave of add_sub_n is
 
 
 	begin
-		process(clk, A, B) is 
+		process(clk,A,B) is 
 		begin
-			--if (clk = '1' and clk'event) then
-				Result <= std_logic_vector((A(bits - 1) & A)  + (B(bits - 1) & B));
-			--end if;
+			if(rising_edge(clk)) then
+				rst <= std_logic_vector((A(bits - 1) & A)  + (B(bits - 1) & B));
+			end if;
 		end process;
-		
-			
+		Result <= rst;
 end behave;

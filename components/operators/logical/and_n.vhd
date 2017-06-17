@@ -27,8 +27,10 @@ architecture behave of and_n is
 	-----------------------------------------
 	--
 	begin
-			Result <= A and B;
-			--Result <= temp;
-			--end if;
-		--end process;	
+		process(clk, A, B) is
+		begin
+			if(clk = '1') then 
+				Result <= A and B;
+			end if;
+		end process;
 end behave;

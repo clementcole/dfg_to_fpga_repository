@@ -30,9 +30,9 @@ architecture behave of sll_n is
 	begin
 		process(clk, A, B) is 
 		begin
-			--if (clk = '1' and clk'event) then
+			if (clk = '1') then
 				Result <= std_logic_vector(to_stdlogicvector(to_bitvector(std_logic_vector(A)) sll to_integer(unsigned(B))) );
-			--end if;
+			end if;
 		end process;
 		
 			

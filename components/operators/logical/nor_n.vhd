@@ -6,7 +6,7 @@ library work;
 
 
 entity nor_n is
-	generic ( bits 	: integer);
+	generic ( bits 	: integer := 32);
 	port (	clk 			: in std_logic;
 				A				: in std_logic_vector(31 downto 0);
 				B				: in std_logic_vector(31 downto 0);
@@ -15,6 +15,7 @@ entity nor_n is
 end entity nor_n;
 
 architecture behave of nor_n is 
+	signal rst : std_logic_vector(31 downto 0);
 	--signal output : signed(32 downto 0);
 	--signal out_rdy : std_logic;
 	--
@@ -24,11 +25,12 @@ architecture behave of nor_n is
 	-----------------------------------------
 	--
 	begin
+		--Result <= rst;
 		process(clk, A, B) is 
 		begin
-			--if (clk = '1' and clk'event) then
+			if (clk = '1') then
 				Result <= not(A or B);
-			--end if;
+			end if;
 		end process;
 		
 			

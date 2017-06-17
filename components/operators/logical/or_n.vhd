@@ -17,6 +17,7 @@ entity or_n is
 end entity or_n;
 
 architecture behave of or_n is 
+	
 	--signal output : signed(31 downto 0);
 	--signal out_rdy : std_logic;
 	--
@@ -31,10 +32,10 @@ architecture behave of or_n is
 	begin
 		process(clk, A, B) is 
 		begin
-			--if (clk = '1' and clk'event) then
+			if(clk = '1') then
 				Result <= A or B;
-			--end if;
+			end if;
 		end process;
-		--Result <= output;
+	
 			
 end behave;

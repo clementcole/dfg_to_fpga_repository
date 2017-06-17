@@ -9,17 +9,18 @@ entity shift_reg_and is
 end shift_reg_and;
 
 architecture arc of shift_reg_and is
-	signal reg : std_logic_vector( 0 downto 0);
+	signal reg : std_logic_vector( 1 downto 0);
 
 begin
 	process(clk,rst) 
 	begin
 		if (rst = '0') then
-			if( rising_edge(clk)) then
-				reg(0) <= data_in;
+			if( clk = '1') then
+				reg(1) <= data_in;
+				reg(0) <= reg(1);
 			end if;
 		elsif(rst = '1') then
-			reg(0) <= '0';
+			reg <= (others => '0');
 		end if;
 	end process;
 	data_out <= reg(0);

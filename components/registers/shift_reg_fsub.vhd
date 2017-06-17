@@ -9,7 +9,7 @@ entity shift_reg_fsub is
 end shift_reg_fsub;
 
 architecture arc of shift_reg_fsub is
-	signal reg : std_logic_vector(14 downto 0) := (others => '0');
+	signal reg : std_logic_vector(13 downto 0) := (others => '0');
 
 begin
 	
@@ -17,8 +17,7 @@ begin
 	begin
 	if (rst = '0') then
 		if( rising_edge(clk)) then
-				reg(14) <= data_in;
-				reg(13) <= reg(14);
+				reg(13) <= data_in;
 				reg(12) <= reg(13);
 				reg(11) <= reg(12);
 				reg(10) <= reg(11);

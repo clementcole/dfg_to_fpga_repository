@@ -19,7 +19,7 @@ begin
 				reg(0) <= data_in;
 			end if;
 		elsif(rst = '1') then
-			reg(0) <= '0';
+			reg <= (others => '0');
 		end if;
 	end process;
 		data_out <= reg(0);

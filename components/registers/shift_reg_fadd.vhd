@@ -9,17 +9,22 @@ entity shift_reg_fadd is
 end shift_reg_fadd;
 
 architecture arc of shift_reg_fadd is
-	signal reg : std_logic_vector(8 downto 0) := (others => '0');
+	signal reg : std_logic_vector(13 downto 0) := (others => '0');
 
 begin
 	
 	process(clk,rst, data_in, reg) is 
 	begin
 		if(rst = '0') then
-			if( clk = '1') then
-					reg(8) <= data_in;
-					reg(7) <= data_in;
-					reg(6) <= data_in;
+			if( rising_edge(clk)) then
+					reg(13) <= data_in;
+					reg(12) <= reg(13);
+					reg(11) <= reg(12);
+					reg(10) <= reg(11);
+					reg(9) <= reg(10);
+					reg(8) <= reg(9);
+					reg(7) <= reg(8);
+					reg(6) <= reg(7);
 					reg(5) <= reg(6);
 					reg(4) <= reg(5);
 					reg(3) <= reg(4);

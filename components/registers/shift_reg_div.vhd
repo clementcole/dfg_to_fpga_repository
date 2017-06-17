@@ -9,7 +9,7 @@ entity shift_reg_div is
 end shift_reg_div;
 
 architecture arc of shift_reg_div is
-	signal reg : std_logic_vector(9 downto 0) := (others => '0');
+	signal reg : std_logic_vector(29 downto 0) := (others => '0');
 
 begin
 	
@@ -17,7 +17,27 @@ begin
 	begin
 	if(rst = '0') then
 		if( rising_edge(clk)) then
-				reg(9) <= data_in;
+				reg(29) <= data_in;
+				reg(28) <= reg(29);
+				reg(27) <= reg(28);
+				reg(26) <= reg(27);
+				reg(25) <= reg(26);
+				reg(24) <= reg(25);
+				reg(23) <= reg(24);
+				reg(22) <= reg(23);
+				reg(21) <= reg(22);
+				reg(20) <= reg(21);
+				reg(19) <= reg(20);
+				reg(18) <= reg(19);
+				reg(17) <= reg(18);
+				reg(16) <= reg(17);
+				reg(15) <= reg(16);
+				reg(14) <= reg(15);
+				reg(13) <= reg(14);
+				reg(12) <= reg(13);
+				reg(11) <= reg(12);
+				reg(10) <= reg(11);
+				reg(9) <= reg(10);
 				reg(8) <= reg(9);
 				reg(7) <= reg(8);
 				reg(6) <= reg(7);

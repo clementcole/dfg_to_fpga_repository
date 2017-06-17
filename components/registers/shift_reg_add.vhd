@@ -14,15 +14,15 @@ architecture arc of shift_reg_add is
 begin
 	--mult_output_ready <= reg(0);
 	process(clk,rst, add_sub_input_ready) is 
-	begin
-	if (rst = '0') then
-		if(rising_edge(clk)) then 
-			reg(0) <= add_sub_input_ready;
+		begin
+		if (rst = '0') then
+			if(clk = '1') then 
+				add_sub_output_ready <= add_sub_input_ready;
+			end if;
+		elsif(rst = '1') then 
+			add_sub_output_ready <= '0';
 		end if;
-	elsif(rst = '1') then 
-		reg(0) <= '0';
-	end if;
 	end process;
-	add_sub_output_ready <= reg(0);
+	--add_sub_output_ready <= reg(0);
 	
 end arc;

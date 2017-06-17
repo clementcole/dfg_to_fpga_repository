@@ -9,7 +9,7 @@ entity shift_reg_mult is
 end shift_reg_mult;
 
 architecture arc of shift_reg_mult is
-	signal reg : std_logic_vector(6 downto 0) := (others => '0');
+	signal reg : std_logic_vector(2 downto 0) := (others => '0');
 
 begin
 	--mult_output_ready <= reg(0);
@@ -17,11 +17,7 @@ begin
 	begin
 	if (rst = '0') then 
 		if( rising_edge(clk) ) then
-				reg(6) <= mult_input_ready;
-				reg(5) <= reg(6);
-				reg(4) <= reg(5);
-				reg(3) <= reg(4);
-				reg(2) <= reg(3);
+				reg(2) <= mult_input_ready;
 				reg(1) <= reg(2);
 				reg(0) <= reg(1);
 	    end if;
