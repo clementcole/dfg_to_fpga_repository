@@ -62,8 +62,8 @@ signal R_sign						: std_logic;
 --Input/output Ready signals
 signal input_ready_signal			: std_logic;
 signal output_ready_signal 			: std_logic;
-signal in_ready 					: std_logic_vector(17 downto 0)		:= (others => '0');
-signal result_ready					: std_logic_vector(17 downto 0)		:= (others => '0'); 
+signal in_ready 					: std_logic_vector(18 downto 0)		:= (others => '0');
+signal result_ready					: std_logic_vector(18 downto 0)		:= (others => '0'); 
 
 
 --Result for arithmetic operations
@@ -84,7 +84,7 @@ signal r_sra 		: std_logic_vector(31 downto 0)	:= (others => '0');
 signal r_sll 		: std_logic_vector(31 downto 0)	:= (others => '0');-- 	:= (others => '0');
 signal r_srl 		: std_logic_vector(31 downto 0)	:= (others => '0');--    := (others => '0');
 signal r_ror 		: std_logic_vector(31 downto 0)	:= (others => '0');
-
+signal r_nand		: std_logic_vector(31 downto 0) := (others => '0');
 --Floating Point Operations
 signal r_fadd 	: std_logic_vector(31 downto 0) := (others => '0');
 signal r_fsub 	: std_logic_vector(31 downto 0) := (others => '0');
@@ -393,7 +393,17 @@ signal m_axis_result_tvalid : std_logic;
   	);
 	end component;
 
-	
+	component nand_reg is
+	generic(bits : integer := 32);
+		port(
+			A 			: in std_logic_vector(31 downto 0); --input operands
+			B 			: in std_logic_vector(31 downto 0);
+			clk 		: in std_logic;
+			rst			: in std_logic;
+			input_ready : in std_logic;
+			output_ready: out std_logic;
+			Result		: out std_logic_vector(31 downto 0));
+	end component;
 begin	
 	--inputA <= A;
 	--inputB <= B;
@@ -498,7 +508,9 @@ begin
 		port map(A => inputA, B => inputB, clk => clk, rst => rst, input_ready => in_ready(17), output_ready => result_ready(17), Result => r_fdiv);
 	
 
-	
+	PM_NAND : nand_reg
+		generic map ( bits => 32)
+		port map(A => inputA, B => inputB, clk => clk, rst => rst, input_ready => in_ready(18), output_ready => result_ready(18), Result => r_nand);
 
 	alu_control : process(clk) is --, Operation,  input_ready, inputA, inputB, rst) is 
 	begin 
@@ -648,7 +660,11 @@ begin
 				in_ready(16) <= input_ready;
 				in_ready(15 downto 0) <= (others => '0');
 
-
+		    when OPCODE_NAND => output(31 downto 0) <= r_nand;
+				output(63 downto 32) <= (others => '0');
+				in_ready(18) <= input_ready;
+				in_ready(17 downto 0) <= (others => '0');
+				in_ready(17 downto 0) <= (others =>'0');
 			when others =>
 				NULL;
 			end case;
@@ -660,7 +676,7 @@ begin
  																or 
   				   result_ready(6) or result_ready(7) or result_ready(8) or result_ready(9) or result_ready(10) or result_ready(11)
   				   													or 
-  				   result_ready(12) or result_ready(13) or result_ready(14) or result_ready(15) or result_ready(16)  or result_ready(17);	
+  				   result_ready(12) or result_ready(13) or result_ready(14) or result_ready(15) or result_ready(16)  or result_ready(17) or result_ready(18);	
 end BEHAVIORAL;
 
 --SIMD Instructions Simple instructions multiple data.

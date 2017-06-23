@@ -71,7 +71,7 @@ architecture testbench of ALU_EXPERIMENT_32_TB is
 	stm_test : process is
 		variable file_line 	: line;
 		variable data 		: std_logic_vector(75 downto 0);
-		file 	test_file	: text open read_mode is "C:\Modeltech_pe_edu_10.4a\DFG_FPGA\DFG_FPGA\components\alu\tests\data_inputs\data_input";
+		file 	test_file	: text open read_mode is "C:\Users\Taylor Shinn\Desktop\SummerDSProject\dfg_to_fpga_repository\components\alu\tests\data_inputs\data_input";
 	begin
 		
 		

@@ -62,8 +62,8 @@ signal R_sign						: std_logic;
 --Input/output Ready signals
 signal input_ready_signal			: std_logic;
 signal output_ready_signal 			: std_logic;
-signal in_ready 					: std_logic_vector(17 downto 0)		:= (others => '0');
-signal result_ready					: std_logic_vector(17 downto 0)		:= (others => '0'); 
+signal in_ready 					: std_logic_vector(18 downto 0)		:= (others => '0');
+signal result_ready					: std_logic_vector(18 downto 0)		:= (others => '0'); 
 
 
 --Result for arithmetic operations
@@ -84,7 +84,7 @@ signal r_sra 		: std_logic_vector(31 downto 0)	:= (others => '0');
 signal r_sll 		: std_logic_vector(31 downto 0)	:= (others => '0');-- 	:= (others => '0');
 signal r_srl 		: std_logic_vector(31 downto 0)	:= (others => '0');--    := (others => '0');
 signal r_ror 		: std_logic_vector(31 downto 0)	:= (others => '0');
-
+signal r_nand 		: std_logic_vector(31 downto 0)	:= (others => '0');
 --Floating Point Operations
 signal r_fadd 	: std_logic_vector(31 downto 0) := (others => '0');
 signal r_fsub 	: std_logic_vector(31 downto 0) := (others => '0');
@@ -128,25 +128,25 @@ signal m_axis_result_tvalid : std_logic;
  -- 	);
 --	end component;
 
-	component add_sub_reg is
-		generic ( bits 	: integer  := 32);
-		port (
-				A				: in signed(31 downto 0);
-				B				: in signed(31 downto 0);
-				clk				:       in std_logic;
-				rst 			:       in std_logic;
-				input_ready : in std_logic;
-				output_ready : out std_logic;
-			Result 	: out std_logic_vector(32 downto 0));
-	end component;
-	--component add_sub_n is 
-	--generic ( bits   : integer :=  32);
-	--port ( 
-	--		clk  : in std_logic; 
-	--		A    : in signed(31 downto 0);
-	--		B    : in signed(31 downto 0);
-	--		result : out std_logic_vector(32 downto 0));
+	--component add_sub_reg is
+	--	generic ( bits 	: integer  := 32);
+	--	port (
+	--			A				: in signed(31 downto 0);
+	--			B				: in signed(31 downto 0);
+	--			clk				:       in std_logic;
+	--			rst 			:       in std_logic;
+	--			input_ready : in std_logic;
+	--			output_ready : out std_logic;
+	--		Result 	: out std_logic_vector(32 downto 0));
 	--end component;
+	component add_sub_n is 
+	generic ( bits   : integer :=  32);
+	port ( 
+			clk  : in std_logic; 
+			A    : in signed(31 downto 0);
+			B    : in signed(31 downto 0);
+			result : out std_logic_vector(32 downto 0));
+	end component;
 
 	component fp_add is
 	  PORT (
@@ -421,11 +421,11 @@ begin
 --	
 --Port mapping operator_register components	
 --			
-	--PM_add_sub : add_sub_n
-	--	port map(clk => clk, A => signed(A), B => signed(B), result => r_add_sub);
-	PM_add_sub : add_sub_reg 
-		generic map ( bits => 32)
-		port map(A  => signed(A), B => signed(B), clk  => clk,  rst => rst,  input_ready => in_ready(0), output_ready => result_ready(0),  std_logic_vector(Result) => r_add_sub);
+	PM_add_sub : add_sub_n
+		port map(clk => clk, A => signed(A), B => signed(B), result => r_add_sub);
+	--PM_add_sub : add_sub_reg 
+	--	generic map ( bits => 32)
+	--	port map(A  => signed(inputA), B => signed(inputB), clk  => clk,  rst => rst,  input_ready => in_ready(0), output_ready => result_ready(0),  std_logic_vector(Result) => r_add_sub);
   
 	PM_MULT : mult_reg
 		generic map(bits => 32)
@@ -498,11 +498,14 @@ begin
 		port map(A => inputA, B => inputB, clk => clk, rst => rst, input_ready => in_ready(17), output_ready => result_ready(17), Result => r_fdiv);
 	
 
-	
+	PM_NAND : nand_reg
+		generic map ( bits => 32)
+		port map(A => inputA, B => inputB, clk => clk, rst => rst, input_ready => in_ready(18), ouput_ready => result_ready(18), Result => r_nand);
+
 
 	alu_control : process(clk) is --, Operation,  input_ready, inputA, inputB, rst) is 
 	begin 
-	--if(rising_edge(clk) ) then --and rst = '0')  then-- and rst = '0') then 
+	if(rising_edge(clk) ) then --and rst = '0')  then-- and rst = '0') then 
 	  
 	  if (alu_operation_ready = '0') then 
 	  	in_ready <= (others => '0');
@@ -531,6 +534,7 @@ begin
 			when OPCODE_ADD_SUB => output(32 downto 0) <= r_add_sub; -- 00001
 				output(63 downto 33) <= (others => '0');
 				in_ready(0) <= input_ready;
+				result_ready(0) <= '1';
 				in_ready(17 downto 1) <= (others => '0');
 				
 				
@@ -545,7 +549,7 @@ begin
 			when OPCODE_OR => output(31 downto 0) <= r_or;	--00011
 				output(63 downto 32) <= (others => '0');
 				in_ready(1 downto 0) <= (others => '0');
-				in_ready(2) <= input_ready;
+				in_ready(2) <= '1';
 				in_ready(17 downto 3) <= (others => '0');
 			
 			when OPCODE_NOR => output(31 downto 0) <= r_nor;
@@ -651,20 +655,24 @@ begin
 				output(63 downto 32) <= (others => '0');
 				
 
+			when OPCODE_NAND => output(31 downto 0) <= r_nand;
+				output(63 downto 32) <= (others => '0');
+				in_ready(18) <= input ready;
+				in_ready(17 downto 0) <= (others =>'0');
 
 
 			when others =>
 				NULL;
 			end case;
 		end if;
-	 -- end if;
+	  end if;
    end process;
   Result <= output;
   output_ready <=  result_ready(0) or result_ready(1)  or result_ready(2) or result_ready(3) or result_ready(4) or result_ready(5) 
  																or 
   				   result_ready(6) or result_ready(7) or result_ready(8) or result_ready(9) or result_ready(10) or result_ready(11)
   				   													or 
-  				   result_ready(12) or result_ready(13) or result_ready(14) or result_ready(15) or result_ready(16)  or result_ready(17);	
+  				   result_ready(12) or result_ready(13) or result_ready(14) or result_ready(15) or result_ready(16)  or result_ready(17) or result_ready(18);	
 end BEHAVIORAL;
 
 --SIMD Instructions Simple instructions multiple data.

@@ -45,7 +45,7 @@ ARCHITECTURE behavior OF ALU_TEST IS
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT AlU_MAIN_32
+    COMPONENT ALU_EXPERIMENT_32
     PORT(
          clk : IN  std_logic;
          reset : IN  std_logic;
@@ -73,7 +73,7 @@ ARCHITECTURE behavior OF ALU_TEST IS
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: AlU_MAIN_32 PORT MAP (
+   uut: ALU_EXPERIMENT_32 PORT MAP (
           clk => clk,
           reset => reset,
           A => A,

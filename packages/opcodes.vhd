@@ -80,6 +80,7 @@ constant OPCODE_GT			:	std_logic_vector(7 downto 0)	:=  x"13";	--GREATER THAN
 constant OPCODE_LT 			:	std_logic_vector(7 downto 0)	:= 	x"14";	--LESS THAN
 constant OPCODE_DELAY		:	std_logic_vector(7 downto 0)	:=  x"15";	--DELAY FUNCTION
 constant OPCODE_LOAD		:	std_logic_vector(7 downto 0)	:=  x"16";	--LOAD FUNCTION
+constant OPCODE_NAND 		: 	std_logic_vector(7 downto 0)  	:= 	x"17";  --Nand gate
 end package;
 
 package body opcodes is
