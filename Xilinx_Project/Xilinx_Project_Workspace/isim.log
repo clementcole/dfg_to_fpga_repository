@@ -1,0 +1,18 @@
+ISim log file
+Running: C:\Users\Kinaesthetic\Xilinx\dfg_to_fpga_repository-master\Xilinx_Project\Xilinx_Project_Workspace\dfga_new_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/dfga_new_tb_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 5 ms
+Simulator is doing circuit initialization process.
+at 0 ps, Instance /dfga_new_tb/uut/PM_SLA/PM_SLA/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+at 0 ps, Instance /dfga_new_tb/uut/PM_SRA/PM_NOR/ : Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+Finished circuit initialization process.
+at 0 ps, Instance /dfga_new_tb/uut/PM_MULT/PM_MULT/U0/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# step
+Stopped at time : 5050 us : File "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/dfga_new_tb.vhd" Line 93

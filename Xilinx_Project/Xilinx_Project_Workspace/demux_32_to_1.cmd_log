@@ -1,0 +1,1 @@
+vhdtdtfi -prj Xilinx_Project_Workspace -o C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/demux_32_to_1.vhi -module demux_32_to_1 -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work demux_32_to_1.vhd 

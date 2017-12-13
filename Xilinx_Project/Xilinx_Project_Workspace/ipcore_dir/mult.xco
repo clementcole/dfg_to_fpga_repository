@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Thu Jun 15 14:24:15 2017
+# Date: Tue Oct 10 02:50:20 2017
 #
 ##############################################################
 #
@@ -22,13 +22,13 @@ SET asysymbol = true
 SET busformat = BusFormatAngleBracketNotRipped
 SET createndf = false
 SET designentry = VHDL
-SET device = xc6vlx240t
+SET device = xc6vlx75t
 SET devicefamily = virtex6
 SET flowvendor = Other
 SET formalverification = false
 SET foundationsym = false
 SET implementationfiletype = Ngc
-SET package = ff1156
+SET package = ff484
 SET removerpms = false
 SET simulationfiles = Behavioral
 SET speedgrade = -1
@@ -65,4 +65,4 @@ CSET zerodetect=false
 MISC pkg_timestamp=2013-07-22T11:36:26Z
 # END Extra information
 GENERATE
-# CRC: 1235ab6b
+# CRC: 5db715c2

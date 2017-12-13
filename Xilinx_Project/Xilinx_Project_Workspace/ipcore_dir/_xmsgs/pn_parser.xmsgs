@@ -8,7 +8,7 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Taylor Shinn/Desktop/SummerDSProject/dfg_to_fpga_repository/Xilinx_Project/Xilinx_Project_Workspace/ipcore_dir/mult.vhd&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/ipcore_dir/mult.vhd&quot; into library work</arg>
 </msg>
 
 </messages>

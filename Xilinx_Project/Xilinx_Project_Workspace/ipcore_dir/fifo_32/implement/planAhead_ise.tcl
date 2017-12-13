@@ -45,7 +45,7 @@
 # PART OF THIS FILE AT ALL TIMES.
 
 
-set device xc6vlx240tff1156-1
+set device xc6vlx75tff484-1
 set projName fifo_32
 set design fifo_32
 set projDir [file dirname [info script]]

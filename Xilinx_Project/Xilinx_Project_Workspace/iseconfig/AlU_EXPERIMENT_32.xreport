@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-06-14T22:16:05</DateModified>
+  <DateModified>2017-12-13T13:50:56</DateModified>
   <ModuleName>AlU_EXPERIMENT_32</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Modeltech_pe_edu_10.4a/DFG_FPGA/DFG_FPGA/Xilinx_Project/Xilinx_Project_Workspace/iseconfig/AlU_EXPERIMENT_32.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Modeltech_pe_edu_10.4a/DFG_FPGA/DFG_FPGA/Xilinx_Project/Xilinx_Project_Workspace\</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2017-10-17T04:15:55</SummaryTimeStamp>
+  <SavedFilePath>C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/iseconfig/AlU_EXPERIMENT_32.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace\</ImplementationReportsDirectory>
   <DateInitialized>2017-06-14T16:55:40</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>
   <viewgroup label="Design Overview" >
-   <view inputState="Unknown" program="implementation" ShowPartitionData="false" type="FPGASummary" file="AlU_EXPERIMENT_32_summary.html" label="Summary" >
+   <view inputState="Unknown" program="implementation" ShowPartitionData="false" type="FPGASummary" file="AlU_EXPERIMENT_32_summary.html" label="Summary" ExpandClockNets="true" >
     <toc-item title="Design Overview" target="Design Overview" />
     <toc-item title="Design Utilization Summary" target="Design Utilization Summary" />
     <toc-item title="Performance Summary" target="Performance Summary" />

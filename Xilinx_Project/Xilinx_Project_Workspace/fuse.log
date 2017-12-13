@@ -1,0 +1,162 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/dfga_new_tb_isim_beh.exe -prj C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/dfga_new_tb_beh.prj work.dfga_new_tb 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 12
+Turning on mult-threading, number of parallel sub-compilation jobs: 24 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/ipcore_dir/fifo_32.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/ipcore_dir/fp_mult.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/ipcore_dir/fp_div.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/ipcore_dir/fp_add.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/ipcore_dir/fp_sub.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/ipcore_dir/mult.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/opcodes.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/registers/shift_reg_xor.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/registers/shift_reg_xnor.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/registers/shift_reg_srl.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/registers/shift_reg_sra.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/registers/shift_reg_sll.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/registers/shift_reg_sla.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/registers/shift_reg_ror.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/registers/shift_reg_rol.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/registers/shift_reg_or.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/registers/shift_reg_not.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/registers/shift_reg_nor.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/registers/shift_reg_mult.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/registers/shift_reg_fsub.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/registers/shift_reg_fmult.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/registers/shift_reg_fdiv.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/registers/shift_reg_fadd.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/registers/shift_reg_and.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/registers/shift_reg_add.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/operators/logical/xor_n.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/operators/logical/xnor_n.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/operators/logical/srl_n.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/operators/logical/sll_n.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/operators/logical/ror_n.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/operators/logical/rol_n.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/operators/logical/or_n.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/operators/logical/not_n.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/operators/logical/nor_n.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/operators/logical/and_n.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/operators/arithmetic/integer/sra_n.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/operators/arithmetic/integer/sla_n.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/operators/arithmetic/integer/add_sub_n.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/demux_32_to_1.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/composite_operators_registers/xor_reg.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/composite_operators_registers/xnor_reg.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/composite_operators_registers/srl_reg.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/composite_operators_registers/sra_reg.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/composite_operators_registers/sll_reg.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/composite_operators_registers/sla_reg.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/composite_operators_registers/ror_reg.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/composite_operators_registers/rol_reg.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/composite_operators_registers/or_reg.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/composite_operators_registers/not_reg.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/composite_operators_registers/nor_reg.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/composite_operators_registers/mult_reg.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/composite_operators_registers/fsub_reg.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/composite_operators_registers/fmult_reg.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/composite_operators_registers/fdiv_reg.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/composite_operators_registers/fadd_reg.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/composite_operators_registers/and_reg.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/composite_operators_registers/add_sub_reg.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/../../components/alu/ALU_EXPERIMENT_32.vhd" into library work
+Parsing VHDL file "C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/dfga_new_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package vcomponents
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling package std_logic_signed
+Compiling package opcodes
+WARNING:Simulator:835 - "N:/P.20131013/env/Jobs/HDLLibraryCompilation/ISim/VHDLLibs/vhdl/src/standard/standard.vhd" Line 68. Time unit fs is less than the vhdl time precision.
+WARNING:Simulator:835 - "N:/P.20131013/env/Jobs/HDLLibraryCompilation/ISim/VHDLLibs/vhdl/src/standard/standard.vhd" Line 68. Time unit fs is less than the vhdl time precision.
+Compiling architecture behavioral of entity demux_32_to_1 [demux_32_to_1_default]
+Compiling package textio
+Compiling package vital_timing
+Compiling package vital_primitives
+Compiling architecture bufgmux_v of entity BUFGMUX [\BUFGMUX("SYNC")(1,4)\]
+Compiling architecture inv_v of entity INV [inv_default]
+Compiling architecture bufgce_v of entity BUFGCE [bufgce_default]
+Compiling architecture behavioral of entity fifo_generator_v9_3_bhv_ss [\fifo_generator_v9_3_bhv_ss(10,3...]
+Compiling architecture behavioral of entity fifo_generator_v9_3_conv [\fifo_generator_v9_3_conv(1,0,10...]
+Compiling architecture behavioral of entity fifo_generator_v9_3 [\fifo_generator_v9_3(1,0,10,"Bla...]
+Compiling architecture fifo_32_a of entity fifo_32 [fifo_32_default]
+Compiling architecture arc of entity shift_reg_add [shift_reg_add_default]
+Compiling architecture behave of entity add_sub_n [\add_sub_n(32)\]
+Compiling architecture behavioral of entity add_sub_reg [\add_sub_reg(32)\]
+Compiling architecture arc of entity shift_reg_mult [shift_reg_mult_default]
+Compiling package bip_utils_pkg_v2_0
+Compiling package mult_gen_pkg_v11_2
+Compiling architecture behavioral of entity mult_gen_v11_2 [\mult_gen_v11_2(0,0,"virtex6",32...]
+Compiling architecture mult_a of entity mult [mult_default]
+Compiling architecture behavioral of entity mult_reg [\mult_reg(32)\]
+Compiling architecture arc of entity shift_reg_or [shift_reg_or_default]
+Compiling architecture behave of entity or_n [\or_n(32)\]
+Compiling architecture behavioral of entity or_reg [\or_reg(32)\]
+Compiling architecture arc of entity shift_reg_nor [shift_reg_nor_default]
+Compiling architecture behave of entity nor_n [\nor_n(32)\]
+Compiling architecture behavioral of entity nor_reg [\nor_reg(32)\]
+Compiling architecture arc of entity shift_reg_xor [shift_reg_xor_default]
+Compiling architecture behave of entity xor_n [\xor_n(32)\]
+Compiling architecture behavioral of entity xor_reg [\xor_reg(32)\]
+Compiling architecture arc of entity shift_reg_xnor [shift_reg_xnor_default]
+Compiling architecture behave of entity xnor_n [\xnor_n(32)\]
+Compiling architecture behavioral of entity xnor_reg [\xnor_reg(32)\]
+Compiling architecture arc of entity shift_reg_not [shift_reg_not_default]
+Compiling architecture behave of entity not_n [\not_n(32)\]
+Compiling architecture behavioral of entity not_reg [\not_reg(32)\]
+Compiling architecture arc of entity shift_reg_sll [shift_reg_sll_default]
+Compiling architecture behave of entity sll_n [\sll_n(32)\]
+Compiling architecture behavioral of entity sll_reg [\sll_reg(32)\]
+Compiling architecture arc of entity shift_reg_srl [shift_reg_srl_default]
+Compiling architecture behave of entity srl_n [\srl_n(32)\]
+Compiling architecture behavioral of entity srl_reg [\srl_reg(32)\]
+Compiling architecture arc of entity shift_reg_sla [shift_reg_sla_default]
+Compiling architecture behave of entity sla_n [\sla_n(32)\]
+Compiling architecture behavioral of entity sla_reg [\sla_reg(32)\]
+Compiling architecture arc of entity shift_reg_sra [shift_reg_sra_default]
+Compiling architecture behave of entity sra_n [\sra_n(32)\]
+Compiling architecture behavioral of entity sra_reg [\sra_reg(32)\]
+Compiling architecture arc of entity shift_reg_ror [shift_reg_ror_default]
+Compiling architecture behave of entity ror_n [\ror_n(32)\]
+Compiling architecture behavioral of entity ror_reg [\ror_reg(32)\]
+Compiling architecture arc of entity shift_reg_rol [shift_reg_rol_default]
+Compiling architecture behave of entity rol_n [\rol_n(32)\]
+Compiling architecture behavioral of entity rol_reg [\rol_reg(32)\]
+Compiling architecture arc of entity shift_reg_fadd [shift_reg_fadd_default]
+Compiling package floating_point_v5_0_consts
+Compiling package floating_point_pkg_v5_0
+Compiling architecture behavioral of entity FLT_PT_OPERATOR_V5_0 [\FLT_PT_OPERATOR_V5_0("virtex6",...]
+Compiling architecture behavioral of entity FLOATING_POINT_V5_0 [\FLOATING_POINT_V5_0("virtex6",1...]
+Compiling architecture fp_add_a of entity fp_add [fp_add_default]
+Compiling architecture behavioral of entity fadd_reg [\fadd_reg(32)\]
+Compiling architecture arc of entity shift_reg_fsub [shift_reg_fsub_default]
+Compiling architecture behavioral of entity FLT_PT_OPERATOR_V5_0 [\FLT_PT_OPERATOR_V5_0("virtex6",...]
+Compiling architecture behavioral of entity FLOATING_POINT_V5_0 [\FLOATING_POINT_V5_0("virtex6",0...]
+Compiling architecture fp_sub_a of entity fp_sub [fp_sub_default]
+Compiling architecture behavioral of entity fsub_reg [\fsub_reg(32)\]
+Compiling architecture arc of entity shift_reg_fmult [shift_reg_fmult_default]
+Compiling architecture behavioral of entity FLT_PT_OPERATOR_V5_0 [\FLT_PT_OPERATOR_V5_0("virtex6",...]
+Compiling architecture behavioral of entity FLOATING_POINT_V5_0 [\FLOATING_POINT_V5_0("virtex6",0...]
+Compiling architecture fp_mult_a of entity fp_mult [fp_mult_default]
+Compiling architecture behavioral of entity fmult_reg [\fmult_reg(32)\]
+Compiling architecture arc of entity shift_reg_and [shift_reg_and_default]
+Compiling architecture behave of entity and_n [\and_n(32)\]
+Compiling architecture behavioral of entity and_reg [\and_reg(32)\]
+Compiling architecture arc of entity shift_reg_fdiv [shift_reg_fdiv_default]
+Compiling architecture behavioral of entity FLT_PT_OPERATOR_V5_0 [\FLT_PT_OPERATOR_V5_0("virtex6",...]
+Compiling architecture behavioral of entity FLOATING_POINT_V5_0 [\FLOATING_POINT_V5_0("virtex6",0...]
+Compiling architecture fp_div_a of entity fp_div [fp_div_default]
+Compiling architecture behavioral of entity fdiv_reg [\fdiv_reg(32)\]
+Compiling architecture behavioral of entity AlU_EXPERIMENT_32 [\AlU_EXPERIMENT_32(32)\]
+Compiling architecture behavior of entity dfga_new_tb
+Time Resolution for simulation is 1ps.
+Waiting for 12 sub-compilation(s) to finish...
+Compiled 160 VHDL Units
+Built simulation executable C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/dfga_new_tb_isim_beh.exe
+Fuse Memory Usage: 73608 KB
+Fuse CPU Usage: 1968 ms

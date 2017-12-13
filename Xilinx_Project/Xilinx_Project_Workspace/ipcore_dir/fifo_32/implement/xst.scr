@@ -1,7 +1,7 @@
 run
 -ifmt VHDL
 -ent fifo_32_exdes 
--p xc6vlx240t-ff1156-1
+-p xc6vlx75t-ff484-1
 -ifn xst.prj
 -write_timing_constraints No
 -iobuf YES

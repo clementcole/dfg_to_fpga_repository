@@ -1,0 +1,75 @@
+Creating log file
+C:\Users\Kinaesthetic\Xilinx\dfg_to_fpga_repository-master\Xilinx_Project\Xilinx
+_Project_Workspace\AlU_EXPERIMENT_32_xpa.log.
+Loading device for application Rf_Device from file '6vlx75t.nph' in environment
+C:\Xilinx\14.7\ISE_DS\ISE\.
+   "AlU_EXPERIMENT_32" is an NCD, version 3.2, device xc6vlx75t, package ff484,
+speed -1
+
+INFO:Power:1693 - 
+   --------------------------------------------------------------
+                         The power estimate will be calculated using PRODUCTION
+   data.
+   --------------------------------------------------------------
+
+Design load 20% completeDesign load 25% completeDesign load 30% completeDesign load 60% completeDesign load 95% completeDesign load 100% completeRunning Vector-less Activity Propagation
+......
+Finished Running Vector-less Activity Propagation
+Finished Running Vector-less Activity Propagation 0 secs 
+WARNING:Power:1337 - Clock frequency for clock net "Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_10_o" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_11_o" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_12_o" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_13_o" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_14_o" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_16_o" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_17_o" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_18_o" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_1_o" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_2_o" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_3_o" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_4_o" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_5_o" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_6_o" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_7_o" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_8_o" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_9_o" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "PM_AND/PM_ADD_SUB_READY_SIGNAL/rst_clk_MUX_2770_o" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "PM_add_sub/PM_ADD_SUB_READY_SIGNAL/rst_clk_MUX_43_o" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "_n0254" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "alu_operation_ready" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "clk_IBUFG" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "clk_IBUFG_BUFG" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "clock_buf0" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "clock_buf1" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "clock_buf10" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "clock_buf11" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "clock_buf12" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "clock_buf13" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "clock_buf15" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "clock_buf16" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "clock_buf17" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "clock_buf2" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "clock_buf3" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "clock_buf4" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "clock_buf5" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "clock_buf6" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "clock_buf7" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "clock_buf8" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "clock_buf9" is zero.
+WARNING:Power:1369 - Clock frequency for one or more clocks was not found through
+   timing constraints (PCF file) or simulation data.  Without knowing the
+   clock frequency of all clocks, dynamic power information for those clock
+   domains will default to zero which may under-estimate the power for this
+   design.  To avoid this warning, provide at least one of the following:
+     1. The proper timing constraints (PERIOD) for clocks (re-implement design
+        and load the newly generated PCF file into XPower Analyzer)
+     2. A post PAR simulation-generated VCD or SAIF file indicating clock
+        frequencies
+     3. The clock frequency for clocks in the "By Type -> Clocks" view in the
+        XPower Analyzer GUI and then applying "Update Power Analysis"
+
+Design 'AlU_EXPERIMENT_32.ncd' and constraints 'AlU_EXPERIMENT_32.pcf' opened successfully
+
+Power report saved as AlU_EXPERIMENT_32.pwr.
+XPE XML file saved as
+C:/Users/Kinaesthetic/Xilinx/dfg_to_fpga_repository-master/Xilinx_Project/Xilinx_Project_Workspace/AlU_EXPERIMENT_32-fin.xpe
