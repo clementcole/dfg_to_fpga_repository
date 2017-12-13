@@ -4,7 +4,7 @@ run
 -ifn AlU_EXPERIMENT_32.prj
 -ofn AlU_EXPERIMENT_32
 -ofmt NGC
--p xc6vlx240t-1-ff1156
+-p xc6vlx75t-1-ff484
 -top AlU_EXPERIMENT_32
 -opt_mode Speed
 -opt_level 1

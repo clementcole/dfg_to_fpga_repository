@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<POWERDATA author="XPower Analyzer" dataVersion="SoftwareVersion:P.20131013" date="Sun Dec 10 23:29:50 2017&#xA;" design="AlU_EXPERIMENT_32.ncd">
+
+  <ENVIRONMENT>
+    <DEVICE grade="Commercial" package="ff484" part="xc6vlx75t" process="Typical" speed="-1" vid="No"/>
+    <VOLTAGESOURCES>
+      <SOURCE icc="0.000" iccq="619.108" name="Vccint" power="619.108" voltage="1.000"/>
+      <SOURCE icc="0.000" iccq="45.000" name="Vccaux" power="112.500" voltage="2.500"/>
+      <SOURCE icc="0.000" iccq="1.000" name="Vcco25" power="2.500" voltage="2.500"/>
+      <SOURCE icc="0.000" iccq="303.309" name="MGTAVcc" power="303.309" voltage="1.000"/>
+      <SOURCE icc="0.000" iccq="212.776" name="MGTAVtt" power="255.331" voltage="1.200"/>
+    </VOLTAGESOURCES>
+    <THERMAL>
+      <AMBIENT value="50.0"/>
+      <AIRFLOW value="250"/>
+      <HEATSINK value="Medium Profile"/>
+      <BOARDSELECTION value="Medium (10&quot;x10&quot;)"/>
+      <BOARDLAYERS value="8 to 11"/>
+      <TJA value="2.7"/>
+      <JUNCTIONTEMP value="53.5"/>
+    </THERMAL>
+  </ENVIRONMENT>
+
+  <BLOCKDETAILS>
+    <BYTYPE>
+      <BLOCKTYPE name="CLOCK">
+        <CLOCK belFanout="1" bufType="LUT5" freq="0.00" hrows="0" leafs="0" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_10_o" power="0.000000" sliceFanout="1"/>
+        <CLOCK belFanout="1" bufType="LUT5" freq="0.00" hrows="0" leafs="0" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_11_o" power="0.000000" sliceFanout="1"/>
+        <CLOCK belFanout="1" bufType="LUT6" freq="0.00" hrows="0" leafs="0" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_12_o" power="0.000000" sliceFanout="1"/>
+        <CLOCK belFanout="1" bufType="LUT6" freq="0.00" hrows="0" leafs="0" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_13_o" power="0.000000" sliceFanout="1"/>
+        <CLOCK belFanout="1" bufType="LUT5" freq="0.00" hrows="0" leafs="0" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_14_o" power="0.000000" sliceFanout="1"/>
+        <CLOCK belFanout="1" bufType="LUT5" freq="0.00" hrows="0" leafs="0" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_16_o" power="0.000000" sliceFanout="1"/>
+        <CLOCK belFanout="1" bufType="LUT6" freq="0.00" hrows="0" leafs="0" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_17_o" power="0.000000" sliceFanout="1"/>
+        <CLOCK belFanout="1" bufType="LUT6" freq="0.00" hrows="0" leafs="0" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_18_o" power="0.000000" sliceFanout="1"/>
+        <CLOCK belFanout="1" bufType="LUT6" freq="0.00" hrows="0" leafs="0" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_1_o" power="0.000000" sliceFanout="1"/>
+        <CLOCK belFanout="1" bufType="LUT5" freq="0.00" hrows="0" leafs="0" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_2_o" power="0.000000" sliceFanout="1"/>
+        <CLOCK belFanout="1" bufType="LUT5" freq="0.00" hrows="0" leafs="0" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_3_o" power="0.000000" sliceFanout="1"/>
+        <CLOCK belFanout="1" bufType="LUT6" freq="0.00" hrows="0" leafs="0" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_4_o" power="0.000000" sliceFanout="1"/>
+        <CLOCK belFanout="1" bufType="LUT6" freq="0.00" hrows="0" leafs="0" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_5_o" power="0.000000" sliceFanout="1"/>
+        <CLOCK belFanout="1" bufType="LUT5" freq="0.00" hrows="0" leafs="0" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_6_o" power="0.000000" sliceFanout="1"/>
+        <CLOCK belFanout="1" bufType="LUT6" freq="0.00" hrows="0" leafs="0" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_7_o" power="0.000000" sliceFanout="1"/>
+        <CLOCK belFanout="1" bufType="LUT6" freq="0.00" hrows="0" leafs="0" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_8_o" power="0.000000" sliceFanout="1"/>
+        <CLOCK belFanout="1" bufType="LUT5" freq="0.00" hrows="0" leafs="0" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_9_o" power="0.000000" sliceFanout="1"/>
+        <CLOCK belFanout="2" bufType="LUT5" freq="0.00" hrows="0" leafs="0" name="PM_AND/PM_ADD_SUB_READY_SIGNAL/rst_clk_MUX_2770_o" power="0.000000" sliceFanout="1"/>
+        <CLOCK belFanout="1" bufType="LUT5" freq="0.00" hrows="0" leafs="0" name="PM_add_sub/PM_ADD_SUB_READY_SIGNAL/rst_clk_MUX_43_o" power="0.000000" sliceFanout="1"/>
+        <CLOCK belFanout="64" bufType="LUT6" freq="0.00" hrows="0" leafs="0" name="_n0254" power="0.000000" sliceFanout="64"/>
+        <CLOCK belFanout="93" bufType="LUT6" freq="0.00" hrows="0" leafs="0" name="alu_operation_ready" power="0.000000" sliceFanout="75"/>
+        <CLOCK belFanout="18" bufType="IOB" freq="0.00" hrows="0" leafs="0" name="clk_IBUFG" power="0.000000" sliceFanout="18"/>
+        <CLOCK belFanout="180" bufType="BUFG" freq="0.00" hrows="1" leafs="10" name="clk_IBUFG_BUFG" power="0.000000" sliceFanout="79"/>
+        <CLOCK belFanout="34" bufType="BUFGCTRL" enableRate="0.986133" freq="0.00" hrows="1" leafs="2" name="clock_buf0" power="0.000000" sliceFanout="10"/>
+        <CLOCK belFanout="67" bufType="BUFGCTRL" enableRate="0.986133" freq="0.00" hrows="1" leafs="5" name="clock_buf1" power="0.000000" sliceFanout="18"/>
+        <CLOCK belFanout="2" bufType="BUFGCTRL" enableRate="0.986133" freq="0.00" hrows="1" leafs="1" name="clock_buf10" power="0.000000" sliceFanout="1"/>
+        <CLOCK belFanout="34" bufType="BUFGCTRL" enableRate="0.986133" freq="0.00" hrows="2" leafs="5" name="clock_buf11" power="0.000000" sliceFanout="14"/>
+        <CLOCK belFanout="34" bufType="BUFGCTRL" enableRate="0.986133" freq="0.00" hrows="2" leafs="5" name="clock_buf12" power="0.000000" sliceFanout="9"/>
+        <CLOCK belFanout="596" bufType="BUFGCTRL" enableRate="0.986133" freq="0.00" hrows="2" leafs="26" name="clock_buf13" power="0.000000" sliceFanout="203"/>
+        <CLOCK belFanout="724" bufType="BUFGCTRL" enableRate="0.986133" freq="0.00" hrows="3" leafs="31" name="clock_buf15" power="0.000000" sliceFanout="229"/>
+        <CLOCK belFanout="35" bufType="BUFGCTRL" enableRate="0.986133" freq="0.00" hrows="2" leafs="8" name="clock_buf16" power="0.000000" sliceFanout="11"/>
+        <CLOCK belFanout="1387" bufType="BUFGCTRL" enableRate="0.986133" freq="0.00" hrows="2" leafs="47" name="clock_buf17" power="0.000000" sliceFanout="396"/>
+        <CLOCK belFanout="35" bufType="BUFGCTRL" enableRate="0.986133" freq="0.00" hrows="2" leafs="5" name="clock_buf2" power="0.000000" sliceFanout="9"/>
+        <CLOCK belFanout="35" bufType="BUFGCTRL" enableRate="0.986133" freq="0.00" hrows="2" leafs="6" name="clock_buf3" power="0.000000" sliceFanout="9"/>
+        <CLOCK belFanout="34" bufType="BUFGCTRL" enableRate="0.986133" freq="0.00" hrows="1" leafs="5" name="clock_buf4" power="0.000000" sliceFanout="9"/>
+        <CLOCK belFanout="34" bufType="BUFGCTRL" enableRate="0.986133" freq="0.00" hrows="1" leafs="4" name="clock_buf5" power="0.000000" sliceFanout="9"/>
+        <CLOCK belFanout="33" bufType="BUFGCTRL" enableRate="0.986133" freq="0.00" hrows="1" leafs="5" name="clock_buf6" power="0.000000" sliceFanout="9"/>
+        <CLOCK belFanout="34" bufType="BUFGCTRL" enableRate="0.986133" freq="0.00" hrows="2" leafs="9" name="clock_buf7" power="0.000000" sliceFanout="17"/>
+        <CLOCK belFanout="34" bufType="BUFGCTRL" enableRate="0.986133" freq="0.00" hrows="2" leafs="7" name="clock_buf8" power="0.000000" sliceFanout="11"/>
+        <CLOCK belFanout="1" bufType="BUFGCTRL" enableRate="0.986133" freq="0.00" hrows="1" leafs="1" name="clock_buf9" power="0.000000" sliceFanout="1"/>
+      </BLOCKTYPE>
+      <BLOCKTYPE name="LOGIC">
+        <LOGIC SELMUX2_1="10" STARTUP_STARTUP="1" carry4s="684" clock="" clockFreq="0.000000" enableRate="0.000000" extNets="2428" fanout="1.945634" ffs="3" logicCap="1741544" luts="4569" name="AlU_EXPERIMENT_32/Combinatorial" numNets="7528" power="0.000000" signalCap="718507" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_10_o" clockFreq="0.000000" enableRate="1.000000" extNets="1" fanout="1.000000" latches="1" logicCap="55" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_10_o" numNets="1" power="0.000000" signalCap="371" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_11_o" clockFreq="0.000000" enableRate="1.000000" extNets="1" fanout="1.000000" latches="1" logicCap="55" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_11_o" numNets="1" power="0.000000" signalCap="394" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_12_o" clockFreq="0.000000" enableRate="1.000000" extNets="1" fanout="1.000000" latches="1" logicCap="55" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_12_o" numNets="1" power="0.000000" signalCap="325" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_13_o" clockFreq="0.000000" enableRate="1.000000" extNets="1" fanout="1.000000" latches="1" logicCap="55" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_13_o" numNets="1" power="0.000000" signalCap="372" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_14_o" clockFreq="0.000000" enableRate="1.000000" extNets="1" fanout="1.000000" latches="1" logicCap="55" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_14_o" numNets="1" power="0.000000" signalCap="459" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_16_o" clockFreq="0.000000" enableRate="1.000000" extNets="1" fanout="1.000000" latches="1" logicCap="55" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_16_o" numNets="1" power="0.000000" signalCap="388" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_17_o" clockFreq="0.000000" enableRate="1.000000" extNets="1" fanout="1.000000" latches="1" logicCap="55" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_17_o" numNets="1" power="0.000000" signalCap="308" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_18_o" clockFreq="0.000000" enableRate="1.000000" extNets="1" fanout="1.000000" latches="1" logicCap="55" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_18_o" numNets="1" power="0.000000" signalCap="370" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_1_o" clockFreq="0.000000" enableRate="1.000000" extNets="1" fanout="1.000000" latches="1" logicCap="55" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_1_o" numNets="1" power="0.000000" signalCap="474" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_2_o" clockFreq="0.000000" enableRate="1.000000" extNets="1" fanout="1.000000" latches="1" logicCap="55" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_2_o" numNets="1" power="0.000000" signalCap="311" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_3_o" clockFreq="0.000000" enableRate="1.000000" extNets="1" fanout="1.000000" latches="1" logicCap="55" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_3_o" numNets="1" power="0.000000" signalCap="310" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_4_o" clockFreq="0.000000" enableRate="1.000000" extNets="1" fanout="1.000000" latches="1" logicCap="55" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_4_o" numNets="1" power="0.000000" signalCap="424" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_5_o" clockFreq="0.000000" enableRate="1.000000" extNets="1" fanout="1.000000" latches="1" logicCap="55" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_5_o" numNets="1" power="0.000000" signalCap="313" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_6_o" clockFreq="0.000000" enableRate="1.000000" extNets="1" fanout="1.000000" latches="1" logicCap="55" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_6_o" numNets="1" power="0.000000" signalCap="433" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_7_o" clockFreq="0.000000" enableRate="1.000000" extNets="1" fanout="1.000000" latches="1" logicCap="55" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_7_o" numNets="1" power="0.000000" signalCap="371" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_8_o" clockFreq="0.000000" enableRate="1.000000" extNets="1" fanout="1.000000" latches="1" logicCap="55" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_8_o" numNets="1" power="0.000000" signalCap="322" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_9_o" clockFreq="0.000000" enableRate="1.000000" extNets="1" fanout="1.000000" latches="1" logicCap="55" name="Inst_demux_32_to_1/GND_10_o_select_line[7]_equal_9_o" numNets="1" power="0.000000" signalCap="388" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="PM_AND/PM_ADD_SUB_READY_SIGNAL/rst_clk_MUX_2770_o" clockFreq="0.000000" enableRate="1.000000" extNets="2" fanout="2.000000" latches="2" logicCap="110" name="PM_AND/PM_ADD_SUB_READY_SIGNAL/rst_clk_MUX_2770_o" numNets="2" power="0.000000" signalCap="629" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="PM_add_sub/PM_ADD_SUB_READY_SIGNAL/rst_clk_MUX_43_o" clockFreq="0.000000" enableRate="1.000000" extNets="1" fanout="1.000000" latches="1" logicCap="55" name="PM_add_sub/PM_ADD_SUB_READY_SIGNAL/rst_clk_MUX_43_o" numNets="1" power="0.000000" signalCap="570" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="alu_operation_ready" clockFreq="0.000000" enableRate="0.074219" extNets="17" fanout="1.000000" latches="17" logicCap="935" name="alu_operation_ready" numNets="17" power="0.000000" signalCap="7147" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="clk_IBUFG_BUFG" clockFreq="0.000000" enableRate="0.457336" extNets="178" fanout="32.353933" ffs="178" logicCap="9790" name="clk_IBUFG_BUFG" numNets="178" power="0.000000" signalCap="801182" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="clock_buf0" clockFreq="0.000000" enableRate="1.000000" extNets="33" fanout="1.000000" ffs="33" logicCap="1815" name="clock_buf0" numNets="33" power="0.000000" signalCap="19488" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="clock_buf1" clockFreq="0.000000" enableRate="1.000000" extNets="67" fanout="1.000000" ffs="67" logicCap="3685" name="clock_buf1" numNets="67" power="0.000000" signalCap="53039" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="clock_buf10" clockFreq="0.000000" enableRate="1.000000" extNets="2" fanout="1.000000" ffs="2" logicCap="110" name="clock_buf10" numNets="2" power="0.000000" signalCap="1639" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="clock_buf11" clockFreq="0.000000" enableRate="1.000000" extNets="34" fanout="1.000000" ffs="2" latches="32" logicCap="1870" name="clock_buf11" numNets="34" power="0.000000" signalCap="12631" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="clock_buf12" clockFreq="0.000000" enableRate="1.000000" extNets="34" fanout="1.000000" ffs="2" latches="32" logicCap="1870" name="clock_buf12" numNets="34" power="0.000000" signalCap="15263" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="clock_buf13" clockFreq="0.000000" enableRate="0.834494" extNets="559" fanout="2.837209" ffs="555" logicCap="65006" name="clock_buf13" numNets="596" power="0.000000" signalCap="314360" sregs="41" toggleRate="0.859899" writeRate="0.996807"/>
+        <LOGIC clock="clock_buf15" clockFreq="0.000000" enableRate="0.939058" extNets="685" fanout="3.830657" ffs="682" logicCap="72832" name="clock_buf15" numNets="724" power="0.000000" signalCap="459131" sregs="42" toggleRate="0.725138" writeRate="1.000000"/>
+        <LOGIC clock="clock_buf16" clockFreq="0.000000" enableRate="1.000000" extNets="32" fanout="1.000000" latches="32" logicCap="1760" name="clock_buf16" numNets="32" power="0.000000" signalCap="10832" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="clock_buf17" clockFreq="0.000000" enableRate="0.962053" extNets="1357" fanout="2.446573" ffs="1350" logicCap="105367" name="clock_buf17" numNets="1387" power="0.000000" signalCap="732321" sregs="37" toggleRate="0.333453" writeRate="1.000000"/>
+        <LOGIC clock="clock_buf2" clockFreq="0.000000" enableRate="1.000000" extNets="35" fanout="1.000000" ffs="3" latches="32" logicCap="1925" name="clock_buf2" numNets="35" power="0.000000" signalCap="12389" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="clock_buf3" clockFreq="0.000000" enableRate="1.000000" extNets="35" fanout="1.000000" ffs="3" latches="32" logicCap="1925" name="clock_buf3" numNets="35" power="0.000000" signalCap="11468" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="clock_buf4" clockFreq="0.000000" enableRate="1.000000" extNets="34" fanout="1.000000" ffs="2" latches="32" logicCap="1870" name="clock_buf4" numNets="34" power="0.000000" signalCap="19712" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="clock_buf5" clockFreq="0.000000" enableRate="1.000000" extNets="34" fanout="1.000000" ffs="2" latches="32" logicCap="1870" name="clock_buf5" numNets="34" power="0.000000" signalCap="18003" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="clock_buf6" clockFreq="0.000000" enableRate="1.000000" extNets="33" fanout="1.000000" ffs="1" latches="32" logicCap="1815" name="clock_buf6" numNets="33" power="0.000000" signalCap="8453" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="clock_buf7" clockFreq="0.000000" enableRate="1.000000" extNets="34" fanout="1.000000" ffs="2" latches="32" logicCap="1870" name="clock_buf7" numNets="34" power="0.000000" signalCap="7909" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="clock_buf8" clockFreq="0.000000" enableRate="1.000000" extNets="34" fanout="1.000000" ffs="2" latches="32" logicCap="1870" name="clock_buf8" numNets="34" power="0.000000" signalCap="9308" toggleRate="0.000000" writeRate="0.000000"/>
+        <LOGIC clock="clock_buf9" clockFreq="0.000000" enableRate="1.000000" extNets="1" fanout="1.000000" ffs="1" logicCap="55" name="clock_buf9" numNets="1" power="0.000000" signalCap="571" toggleRate="0.000000" writeRate="0.000000"/>
+      </BLOCKTYPE>
+      <BLOCKTYPE name="BRAM">
+        <MODULE count="2" name="AlU_EXPERIMENT_32 - clk_IBUFG_BUFG">
+          <GROUPSUMMARY>
+            <BRAM mode="RAMB36" name="AlU_EXPERIMENT_32 - clk_IBUFG_BUFG" power="0.000000" toggleRate="0.000000">
+              <RAMPORT clock="clk_IBUFG_BUFG" clockFreq="0.000000" enableRate="0.285887" name="A" readWidth="36" writeMode="READ_FIRST" writeRate="0.285887" writeWidth="36"/>
+              <RAMPORT clock="clk_IBUFG_BUFG" clockFreq="0.000000" enableRate="0.358026" name="B" readWidth="36" writeMode="READ_FIRST" writeRate="0.000000" writeWidth="36"/>
+            </BRAM>
+          </GROUPSUMMARY>
+        </MODULE>
+      </BLOCKTYPE>
+      <BLOCKTYPE name="IO">
+        <MODULE count="32" name="A&lt;0:31>">
+          <GROUPSUMMARY>
+            <IO clock="" clockFreq="0.000000" dataRate="SDR" ibufLowPower="No" inputs="32" ioDelay="No" ioStandard="LVCMOS25" name="A&lt;0:31>" serdes="No" signalRate="0.000000" toggleRate="0.000000" vccAux="0.000000" vccInt="0.000000" vcco="0.000000" vccoCurrent="0.000000"/>
+          </GROUPSUMMARY>
+        </MODULE>
+        <MODULE count="32" name="B&lt;0:31>">
+          <GROUPSUMMARY>
+            <IO clock="" clockFreq="0.000000" dataRate="SDR" ibufLowPower="No" inputs="32" ioDelay="No" ioStandard="LVCMOS25" name="B&lt;0:31>" serdes="No" signalRate="0.000000" toggleRate="0.000000" vccAux="0.000000" vccInt="0.000000" vcco="0.000000" vccoCurrent="0.000000"/>
+          </GROUPSUMMARY>
+        </MODULE>
+        <MODULE count="8" name="Operation&lt;0:7>">
+          <GROUPSUMMARY>
+            <IO clock="" clockFreq="0.000000" dataRate="SDR" ibufLowPower="No" inputs="8" ioDelay="No" ioStandard="LVCMOS25" name="Operation&lt;0:7>" serdes="No" signalRate="0.000000" toggleRate="0.000000" vccAux="0.000000" vccInt="0.000000" vcco="0.000000" vccoCurrent="0.000000"/>
+          </GROUPSUMMARY>
+        </MODULE>
+        <MODULE count="64" name="Result&lt;0:63>">
+          <GROUPSUMMARY>
+            <IO clock="_n0254" clockFreq="0.000000" dataRate="SDR" ibufLowPower="No" ioDelay="No" ioStandard="LVCMOS25_12_SLOW" name="Result&lt;0:63>" outputEnableRate="1.000000" outputLoad="5" outputs="64" serdes="Yes" signalRate="0.000000" toggleRate="0.000000" vccAux="0.000000" vccInt="0.000000" vcco="0.000000" vccoCurrent="0.000000"/>
+          </GROUPSUMMARY>
+        </MODULE>
+        <MODULE count="1" name="clk">
+          <GROUPSUMMARY>
+            <IO clock="" clockFreq="0.000000" dataRate="SDR" ibufLowPower="No" inputs="1" ioDelay="No" ioStandard="LVCMOS25" name="clk" serdes="No" signalRate="0.000000" toggleRate="0.000000" vccAux="0.000000" vccInt="0.000000" vcco="0.000000" vccoCurrent="0.000000"/>
+          </GROUPSUMMARY>
+        </MODULE>
+        <MODULE count="1" name="en">
+          <GROUPSUMMARY>
+            <IO clock="" clockFreq="0.000000" dataRate="SDR" ibufLowPower="No" inputs="1" ioDelay="No" ioStandard="LVCMOS25" name="en" serdes="No" signalRate="0.000000" toggleRate="0.000000" vccAux="0.000000" vccInt="0.000000" vcco="0.000000" vccoCurrent="0.000000"/>
+          </GROUPSUMMARY>
+        </MODULE>
+        <MODULE count="1" name="input_ready">
+          <GROUPSUMMARY>
+            <IO clock="" clockFreq="0.000000" dataRate="SDR" ibufLowPower="No" inputs="1" ioDelay="No" ioStandard="LVCMOS25" name="input_ready" serdes="No" signalRate="0.000000" toggleRate="0.000000" vccAux="0.000000" vccInt="0.000000" vcco="0.000000" vccoCurrent="0.000000"/>
+          </GROUPSUMMARY>
+        </MODULE>
+        <MODULE count="1" name="output_ready">
+          <GROUPSUMMARY>
+            <IO clock="" clockFreq="0.000000" dataRate="SDR" ibufLowPower="No" ioDelay="No" ioStandard="LVCMOS25_12_SLOW" name="output_ready" outputEnableRate="1.000000" outputLoad="5" outputs="1" serdes="No" signalRate="0.000000" toggleRate="0.000000" vccAux="0.000000" vccInt="0.000000" vcco="0.000000" vccoCurrent="0.000000"/>
+          </GROUPSUMMARY>
+        </MODULE>
+        <MODULE count="1" name="rst">
+          <GROUPSUMMARY>
+            <IO clock="" clockFreq="0.000000" dataRate="SDR" ibufLowPower="No" inputs="1" ioDelay="No" ioStandard="LVCMOS25" name="rst" serdes="No" signalRate="0.000000" toggleRate="0.000000" vccAux="0.000000" vccInt="0.000000" vcco="0.000000" vccoCurrent="0.000000"/>
+          </GROUPSUMMARY>
+        </MODULE>
+      </BLOCKTYPE>
+      <BLOCKTYPE name="GTXE1">
+        <MODULE count="1" name="GTXE1_ML_REPLICATED_0_STARTUP_V6_PWRUP_GTXE1_ML_INSERTED_MapLib_replicate0">
+          <GROUPSUMMARY>
+            <GTXE1 channels="1" gtSide="SouthNorth" gtSite="X0Y0" keepAlive="Yes" name="GTXE1_ML_REPLICATED_0_STARTUP_V6_PWRUP_GTXE1_ML_INSERTED_MapLib_replicate0" opMode="Transmitter" power="0.000000" rxDataMode="Raw" rxDataPath="20" rxDataRate="0.000000" rxInternalDataWidth="20" rxPowerMode="Low Power" txAmplitude="130" txDataMode="Raw" txDataPath="20" txDataRate="0.000000" txInternalDataWidth="20" txPowerMode="Low Power"/>
+          </GROUPSUMMARY>
+        </MODULE>
+        <MODULE count="1" name="GTXE1_ML_REPLICATED_1_STARTUP_V6_PWRUP_GTXE1_ML_INSERTED_MapLib_replicate1">
+          <GROUPSUMMARY>
+            <GTXE1 channels="1" gtSide="SouthNorth" gtSite="X0Y1" keepAlive="Yes" name="GTXE1_ML_REPLICATED_1_STARTUP_V6_PWRUP_GTXE1_ML_INSERTED_MapLib_replicate1" opMode="Transmitter" power="0.000000" rxDataMode="Raw" rxDataPath="20" rxDataRate="0.000000" rxInternalDataWidth="20" rxPowerMode="Low Power" txAmplitude="130" txDataMode="Raw" txDataPath="20" txDataRate="0.000000" txInternalDataWidth="20" txPowerMode="Low Power"/>
+          </GROUPSUMMARY>
+        </MODULE>
+        <MODULE count="1" name="GTXE1_ML_REPLICATED_2_STARTUP_V6_PWRUP_GTXE1_ML_INSERTED_MapLib_replicate2">
+          <GROUPSUMMARY>
+            <GTXE1 channels="1" gtSide="SouthNorth" gtSite="X0Y2" keepAlive="Yes" name="GTXE1_ML_REPLICATED_2_STARTUP_V6_PWRUP_GTXE1_ML_INSERTED_MapLib_replicate2" opMode="Transmitter" power="0.000000" rxDataMode="Raw" rxDataPath="20" rxDataRate="0.000000" rxInternalDataWidth="20" rxPowerMode="Low Power" txAmplitude="130" txDataMode="Raw" txDataPath="20" txDataRate="0.000000" txInternalDataWidth="20" txPowerMode="Low Power"/>
+          </GROUPSUMMARY>
+        </MODULE>
+        <MODULE count="1" name="GTXE1_ML_REPLICATED_3_STARTUP_V6_PWRUP_GTXE1_ML_INSERTED_MapLib_replicate3">
+          <GROUPSUMMARY>
+            <GTXE1 channels="1" gtSide="SouthNorth" gtSite="X0Y3" keepAlive="Yes" name="GTXE1_ML_REPLICATED_3_STARTUP_V6_PWRUP_GTXE1_ML_INSERTED_MapLib_replicate3" opMode="Transmitter" power="0.000000" rxDataMode="Raw" rxDataPath="20" rxDataRate="0.000000" rxInternalDataWidth="20" rxPowerMode="Low Power" txAmplitude="130" txDataMode="Raw" txDataPath="20" txDataRate="0.000000" txInternalDataWidth="20" txPowerMode="Low Power"/>
+          </GROUPSUMMARY>
+        </MODULE>
+        <MODULE count="1" name="GTXE1_ML_REPLICATED_4_STARTUP_V6_PWRUP_GTXE1_ML_INSERTED_MapLib_replicate4">
+          <GROUPSUMMARY>
+            <GTXE1 channels="1" gtSide="SouthNorth" gtSite="X0Y4" keepAlive="Yes" name="GTXE1_ML_REPLICATED_4_STARTUP_V6_PWRUP_GTXE1_ML_INSERTED_MapLib_replicate4" opMode="Transmitter" power="0.000000" rxDataMode="Raw" rxDataPath="20" rxDataRate="0.000000" rxInternalDataWidth="20" rxPowerMode="Low Power" txAmplitude="130" txDataMode="Raw" txDataPath="20" txDataRate="0.000000" txInternalDataWidth="20" txPowerMode="Low Power"/>
+          </GROUPSUMMARY>
+        </MODULE>
+        <MODULE count="1" name="GTXE1_ML_REPLICATED_5_STARTUP_V6_PWRUP_GTXE1_ML_INSERTED_MapLib_replicate5">
+          <GROUPSUMMARY>
+            <GTXE1 channels="1" gtSide="SouthNorth" gtSite="X0Y5" keepAlive="Yes" name="GTXE1_ML_REPLICATED_5_STARTUP_V6_PWRUP_GTXE1_ML_INSERTED_MapLib_replicate5" opMode="Transmitter" power="0.000000" rxDataMode="Raw" rxDataPath="20" rxDataRate="0.000000" rxInternalDataWidth="20" rxPowerMode="Low Power" txAmplitude="130" txDataMode="Raw" txDataPath="20" txDataRate="0.000000" txInternalDataWidth="20" txPowerMode="Low Power"/>
+          </GROUPSUMMARY>
+        </MODULE>
+        <MODULE count="1" name="GTXE1_ML_REPLICATED_6_STARTUP_V6_PWRUP_GTXE1_ML_INSERTED_MapLib_replicate6">
+          <GROUPSUMMARY>
+            <GTXE1 channels="1" gtSide="SouthNorth" gtSite="X0Y6" keepAlive="Yes" name="GTXE1_ML_REPLICATED_6_STARTUP_V6_PWRUP_GTXE1_ML_INSERTED_MapLib_replicate6" opMode="Transmitter" power="0.000000" rxDataMode="Raw" rxDataPath="20" rxDataRate="0.000000" rxInternalDataWidth="20" rxPowerMode="Low Power" txAmplitude="130" txDataMode="Raw" txDataPath="20" txDataRate="0.000000" txInternalDataWidth="20" txPowerMode="Low Power"/>
+          </GROUPSUMMARY>
+        </MODULE>
+        <MODULE count="1" name="GTXE1_ML_REPLICATED_7_STARTUP_V6_PWRUP_GTXE1_ML_INSERTED_MapLib_replicate7">
+          <GROUPSUMMARY>
+            <GTXE1 channels="1" gtSide="SouthNorth" gtSite="X0Y7" keepAlive="Yes" name="GTXE1_ML_REPLICATED_7_STARTUP_V6_PWRUP_GTXE1_ML_INSERTED_MapLib_replicate7" opMode="Transmitter" power="0.000000" rxDataMode="Raw" rxDataPath="20" rxDataRate="0.000000" rxInternalDataWidth="20" rxPowerMode="Low Power" txAmplitude="130" txDataMode="Raw" txDataPath="20" txDataRate="0.000000" txInternalDataWidth="20" txPowerMode="Low Power"/>
+          </GROUPSUMMARY>
+        </MODULE>
+      </BLOCKTYPE>
+      <BLOCKTYPE name="IOBANK">
+        <IOBANK numDCICascade="0" numDelayControl="0" numInternalVref="0" numLVDSBanks="0"/>
+      </BLOCKTYPE>
+    </BYTYPE>
+  </BLOCKDETAILS>
+
+</POWERDATA>

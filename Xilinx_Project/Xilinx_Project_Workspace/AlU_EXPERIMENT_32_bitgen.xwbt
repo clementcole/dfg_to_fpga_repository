@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Kinaesthetic\Xilinx\dfg_to_fpga_repository-master\Xilinx_Project\Xilinx_Project_Workspace\AlU_EXPERIMENT_32.ncd
+OUTFILE=C:\Users\Kinaesthetic\Xilinx\dfg_to_fpga_repository-master\Xilinx_Project\Xilinx_Project_Workspace\AlU_EXPERIMENT_32.bit
+FAMILY=Virtex6
+PART=xc6vlx75t-1ff484
+WORKINGDIR=C:\Users\Kinaesthetic\Xilinx\dfg_to_fpga_repository-master\Xilinx_Project\Xilinx_Project_Workspace
+LICENSE=WebPack
+USER_INFO=211252909_0_0_451
