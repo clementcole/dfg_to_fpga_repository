@@ -58,9 +58,15 @@ architecture behavioral of rol_reg is
 
 	begin 
 		PM_ROL_READY_SIGNAL : shift_reg_rol
-		 port map( clk => clk, rst => rst, data_in => input_ready, data_out => output_ready);
+		 port map( clk => clk, 
+					  rst => rst, 
+					  data_in => input_ready, 
+					  data_out => output_ready);
 
 		PM_ROL : rol_n 
-		 port map(clk => clk, A => A, B => B, result => Result);
+		 port map(clk => clk, 
+					 A => A, 
+					 B => B, 
+					 result => Result);
 
 end architecture;  

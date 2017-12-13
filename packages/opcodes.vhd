@@ -54,42 +54,48 @@ procedure clk_gen(signal clk : out std_logic; constant FREQ : real; PHASE : time
 --signal memblock16x16 : width32;
 --signal memblock32x32 : width
 --Please ignore the intermediate values 
-constant OPCODE_CLEAR       :   std_logic_vector(7 downto 0)    :=  x"FF";  --CLEAR for resetting alu
-constant OPCODE_IDLE		:	std_logic_vector(7 downto 0)	:=	x"FE";	--IDLE for reseting alu
+constant OPCODE_CLEAR      :  std_logic_vector(7 downto 0)  := x"FF";   --CLEAR for resetting alu
+constant OPCODE_IDLE			:	std_logic_vector(7 downto 0)	:=	x"FE";	--IDLE for reseting alu
 constant OPCODE_ADD_SUB		:	std_logic_vector(7 downto 0)	:=	x"00";	--add/sub  = 0 TESTED
-constant OPCODE_MULT		:	std_logic_vector(7 downto 0)	:=	x"01";	--MULT	  = TESTED
-constant OPCODE_DIV			:	std_logic_vector(7 downto 0)	:= 	x"02";	--DIV  = NOT TESTED
-constant OPCODE_OR			:	std_logic_vector(7 downto 0)	:= 	x"03";	--OR  = TESTED
+constant OPCODE_MULT			:	std_logic_vector(7 downto 0)	:=	x"01";	--MULT	  = TESTED
+constant OPCODE_DIV			:	std_logic_vector(7 downto 0)	:= x"02";	--DIV  = NOT TESTED
+constant OPCODE_OR			:	std_logic_vector(7 downto 0)	:= x"03";	--OR  = TESTED
 constant OPCODE_NOR			: 	std_logic_vector(7 downto 0)	:=	x"04";	--NOR = NOT TESTED
 constant OPCODE_XOR			: 	std_logic_vector(7 downto 0)	:=	x"05";	--XOR  = NOT  TESTED
-constant OPCODE_XNOR		: 	std_logic_vector(7 downto 0)	:=	x"06";	--XNOR = NOT TESTED 
+constant OPCODE_XNOR			: 	std_logic_vector(7 downto 0)	:=	x"06";	--XNOR = NOT TESTED 
 constant OPCODE_AND			:	std_logic_vector(7 downto 0)	:=	x"07";	--AND  = NOT TESTED
 constant OPCODE_NOT			: 	std_logic_vector(7 downto 0)	:=	x"08";	--NOT  = NOT TESTED
 constant OPCODE_SLA			: 	std_logic_vector(7 downto 0)	:=	x"09";	--SLA  = NOT TESTED
 constant OPCODE_SRA			: 	std_logic_vector(7 downto 0)	:=	x"0A";	--SRA  = NOT TESTED
 constant OPCODE_SLL			: 	std_logic_vector(7 downto 0)	:=	x"0B";	--SLL  = NOT TESTED
 constant OPCODE_SRL			: 	std_logic_vector(7 downto 0)	:=	x"0C";	--SRL = NOT TESTED
-constant OPCODE_ROR			:	std_logic_vector(7 downto 0)	:=  x"0D";	--ROR = NOT TESTED
-constant OPCODE_ROL			:	std_logic_vector(7 downto 0)	:= 	x"0E";	--ROL = NOT TESTED
-constant OPCODE_FADD		: 	std_logic_vector(7 downto 0)	:=	x"0F";	--FADD = NOT TESTED
-constant OPCODE_FSUB		: 	std_logic_vector(7 downto 0)	:=	x"10";	--FSUB = NOT TESTED
+constant OPCODE_ROR			:	std_logic_vector(7 downto 0)	:= x"0D";	--ROR = NOT TESTED
+constant OPCODE_ROL			:	std_logic_vector(7 downto 0)	:= x"0E";	--ROL = NOT TESTED
+constant OPCODE_FADD			: 	std_logic_vector(7 downto 0)	:=	x"0F";	--FADD = NOT TESTED
+constant OPCODE_FSUB			: 	std_logic_vector(7 downto 0)	:=	x"10";	--FSUB = NOT TESTED
 constant OPCODE_FMULT		: 	std_logic_vector(7 downto 0)	:=	x"11";	--FMULT  = NOT TESTED
-constant OPCODE_FDIV		:   std_logic_vector(7 downto 0)    :=  x"12";	--FDIV = NOT YET
+constant OPCODE_FDIV			:   std_logic_vector(7 downto 0) := x"12";	--FDIV = NOT YET
 --Later added opcodes
-constant OPCODE_GT			:	std_logic_vector(7 downto 0)	:=  x"13";	--GREATER THAN
-constant OPCODE_LT 			:	std_logic_vector(7 downto 0)	:= 	x"14";	--LESS THAN
-constant OPCODE_DELAY		:	std_logic_vector(7 downto 0)	:=  x"15";	--DELAY FUNCTION
-constant OPCODE_LOAD		:	std_logic_vector(7 downto 0)	:=  x"16";	--LOAD FUNCTION
-constant OPCODE_NAND 		: 	std_logic_vector(7 downto 0)  	:= 	x"17";  --Nand gate
+constant OPCODE_GT			:	std_logic_vector(7 downto 0)	:= x"13";	--GREATER THAN
+constant OPCODE_LT 			:	std_logic_vector(7 downto 0)	:= x"14";	--LESS THAN
+constant OPCODE_DELAY		:	std_logic_vector(7 downto 0)	:= x"15";	--DELAY FUNCTION
+constant OPCODE_LOAD			:	std_logic_vector(7 downto 0)	:= x"16";	--LOAD FUNCTION
+constant OPCODE_NAND 		: 	std_logic_vector(7 downto 0)  := x"17";   --Nand gate
 end package;
 
+
+
+
+
 package body opcodes is
-    procedure clk_gen(signal clk : out std_logic; constant FREQ : real; PHASE : time := 0 fs; signal run : std_logic) is
+
+   procedure clk_gen(signal clk : out std_logic; constant FREQ : real; PHASE : time := 0 fs; signal run : std_logic) is
 	constant HIGH_TIME   : time := 0.5 sec / FREQ;  -- High time as fixed value
   	variable low_time_v  : time;                    -- Low time calculated per cycle; always >= HIGH_TIME
   	variable cycles_v    : real := 0.0;             -- Number of cycles
   	variable freq_time_v : time := 0 fs;            -- Time used for generation of cycles
-	begin
+	
+ begin
   	-- Check the arguments
   	assert (HIGH_TIME /= 0 fs) report "clk_gen: High time is zero; time resolution to large for frequency" severity FAILURE;
   	-- Initial phase shift
@@ -116,39 +122,39 @@ package body opcodes is
     function twocomplement(data : std_logic_vector) 
         return std_logic_vector is
         variable temp : std_logic_vector(data'length downto 0);
-    begin
-		temp := std_logic_vector( to_unsigned(to_integer(unsigned(not(data))) + 1, data'length));
-      return temp;
-    end twocomplement;
+		begin
+			temp := std_logic_vector( to_unsigned(to_integer(unsigned(not(data))) + 1, data'length));
+			return temp;
+	end twocomplement;
 
     function to_std_logic_vector(s : string) 
-	return std_logic_vector is
-		variable r : std_logic_vector(s'length * 8 downto 0);
-	begin
-		for i in 1 to s'high loop
-			r(i * 8 - 1 downto (i - 1) * 8) := std_logic_vector( to_unsigned( character'pos(s(i)) , 8 ) ) ;
-		end loop ;
-	return r ;
+		  return std_logic_vector is
+		  variable r : std_logic_vector(s'length * 8 downto 0);
+		begin
+			for i in 1 to s'high loop
+				r(i * 8 - 1 downto (i - 1) * 8) := std_logic_vector( to_unsigned( character'pos(s(i)) , 8 ) ) ;
+			end loop ;
+		return r ;
     end to_std_logic_vector;
 
     function vec_to_string( s : string )
-	return string 
-	is
-		variable r : string(s'high downto s'low) ;
-	begin
-		for i in 1 to s'high loop
-			r(s'high + 1 - i) := s(i) ;
-		end loop ;
-	return r ;
+		  return string 
+			is
+		  variable r : string(s'high downto s'low) ;
+		begin
+			for i in 1 to s'high loop
+				r(s'high + 1 - i) := s(i) ;
+			end loop ;
+		return r ;
     end vec_to_string ;
 
     function initialize(para : signed) 
-	return signed
-	is
-		variable tempfunc : signed(63 downto 0);
-	begin
-		tempfunc := (others => '0');
-	return tempfunc;
+		  return signed
+			is
+		  variable tempfunc : signed(63 downto 0);
+		begin
+			tempfunc := (others => '0');
+		return tempfunc;
     end initialize;
 
 	function divide(a : unsigned; b : unsigned) 
@@ -171,7 +177,8 @@ package body opcodes is
 			end if;
 		end loop;
 		return a1;
-   	end divide;
+    end divide;
+		
 	function extractSign(floatvalue : signed) 
 		return std_logic is
 		variable signvalue : integer;
@@ -201,9 +208,9 @@ package body opcodes is
 		return signed is
 		variable product : std_logic_vector(31 downto 0);	
 		begin
-			product(31) 	     := extractSign(floatvalueA) xor extractSign(floatvalueB);
-			product(30 downto 23) := std_logic_vector( to_signed(to_integer(extractExponentSingle(floatvalueA)) + to_integer(extractExponentSingle(floatvalueB)) , 8 ));
-			product(22 downto 0) := std_logic_vector(to_signed(to_integer( unsigned(extractMantissaSingle(floatvalueA))) * to_integer(unsigned(extractMantissaSingle(floatvalueB))) , 23));
+			product(31) 	     		:= extractSign(floatvalueA) xor extractSign(floatvalueB);
+			product(30 downto 23) 	:= std_logic_vector( to_signed(to_integer(extractExponentSingle(floatvalueA)) + to_integer(extractExponentSingle(floatvalueB)) , 8 ));
+			product(22 downto 0) 	:= std_logic_vector(to_signed(to_integer( unsigned(extractMantissaSingle(floatvalueA))) * to_integer(unsigned(extractMantissaSingle(floatvalueB))) , 23));
 			return signed(product); 
 	end multiplyFloatSingle;
 			

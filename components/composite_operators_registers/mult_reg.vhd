@@ -62,10 +62,16 @@ architecture BEHAVIORAL of mult_reg is
     begin 
     
     	PM_MULT_OUTPUT_READY_SIGNAL : shift_reg_mult
-			port map(clk => clk, rst => rst,  mult_input_ready => input_ready, mult_output_ready => output_ready );
+			port map(clk => clk, 
+						rst => rst,  
+						mult_input_ready => input_ready, 
+						mult_output_ready => output_ready );
    
         PM_MULT : mult
-			port map( clk => clk, a => A, b => B,  p => Result);
+			port map( clk => clk, 
+						 a => A, 
+						 b => B,  
+						 p => Result);
 
 
 end architecture;

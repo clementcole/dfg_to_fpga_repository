@@ -60,10 +60,16 @@ end component;
 
 	begin 
 		PM_FADD_READY_SIGNAL : shift_reg_fadd
-		 port map( clk => clk, rst => rst, data_in => input_ready, data_out => output_ready);
+		 port map( clk => clk, 
+					  rst => rst, 
+					  data_in => input_ready, 
+					  data_out => output_ready);
 
 		PM_FADD : fp_add
-			port map(A => A, B => B, clk => clk, result => Result );
+			port map(A => A, 
+						B => B, 
+						clk => clk, 
+						result => Result );
 
 
 end architecture;  

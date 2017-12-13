@@ -58,9 +58,15 @@ END COMPONENT;
 
 	begin 
 		PM_DIV_READY_SIGNAL : shift_reg_fdiv
-		 port map( clk => clk, rst => rst, data_in => input_ready, data_out => output_ready);
+		 port map( clk => clk, 
+					  rst => rst, 
+					  data_in => input_ready, 
+					  data_out => output_ready);
 
 		PM_DIV : fp_div 
-		 port map(a => A, b => B, clk => clk, result => Result);
+		 port map(a => A, 
+					 b => B, 
+					 clk => clk, 
+					 result => Result);
 
 end architecture;  

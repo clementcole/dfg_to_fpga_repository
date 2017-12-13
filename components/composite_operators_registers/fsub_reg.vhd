@@ -57,9 +57,15 @@ architecture behavioral of fsub_reg is
 
 	begin 
 		PM_FSUB_READY_SIGNAL : shift_reg_fsub
-		 port map( clk => clk, rst => rst, data_in => input_ready, data_out => output_ready);
+		 port map( clk => clk, 
+					  rst => rst, 
+					  data_in => input_ready, 
+					  data_out => output_ready);
 
 		PM_FSUB : fp_sub 
-		 port map(a => A, b => B, clk => clk, result => Result);
+		 port map(a => A, 
+					 b => B, 
+					 clk => clk, 
+					 result => Result);
 
 end architecture;  

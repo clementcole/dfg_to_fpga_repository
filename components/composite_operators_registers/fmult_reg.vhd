@@ -57,9 +57,15 @@ architecture behavioral of fmult_reg is
 
 	begin 
 		PM_FMULT_READY_SIGNAL : shift_reg_fmult
-		 port map( clk => clk, rst => rst, data_in => input_ready, data_out => output_ready);
+		 port map( clk => clk, 
+					  rst => rst, 
+					  data_in => input_ready, 
+					  data_out => output_ready);
 
 		PM_FMULT : fp_mult
-		 port map(a => A, b => B, clk => clk, result => Result);
+		 port map(a => A, 
+					 b => B, 
+					 clk => clk, 
+					 result => Result);
 
 end architecture;  

@@ -25,12 +25,16 @@ library work;
 use work.opcodes.all;
 
 
+
+
+
 entity add_sub_reg is
 	generic(bits : integer := 32);
 	port (
 		A     : in signed(31 downto 0);
 		B     : in signed(31 downto 0);
 		clk   : in std_logic; 
+		--en		: in std_logic;
 		rst   : in std_logic; 
 		input_ready : in std_logic; 
 		output_ready : out std_logic; 
@@ -58,9 +62,16 @@ architecture behavioral of add_sub_reg is
 
 	begin 
 		PM_ADD_SUB_READY_SIGNAL : shift_reg_add
-			port map( clk => clk, rst => rst, add_sub_input_ready => input_ready, add_sub_output_ready => output_ready);
+			port map( clk => clk, 
+						 rst => rst, 
+						 add_sub_input_ready => input_ready, 
+						 add_sub_output_ready => output_ready);
+						 
 		--output_ready <= input_ready;
 		PM_ADD_SUB  : add_sub_n 
-			port map(clk => clk, A => A, B => B, result => Result);
+			port map(clk => clk, 
+						A => A, 
+						B => B, 
+						result => Result);
 
 end architecture;  

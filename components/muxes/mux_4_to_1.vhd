@@ -9,7 +9,7 @@ entity mux_4_to_1 is
     src_X2    : in  std_logic_vector(63 downto 0);
     src_X3    : in  std_logic_vector(63 downto 0);
     sel       : in  std_logic_vector(1 downto 0);
-    dest       : out std_logic_vector(31 downto 0)
+    dest      : out std_logic_vector(31 downto 0)
     );
 end mux_4_to_1;
 

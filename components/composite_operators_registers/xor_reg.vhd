@@ -60,8 +60,14 @@ architecture BEHAVIORAL of xor_reg is
 
 	begin 
 		PM_XOR_READY_SIGNAL : shift_reg_xor
-		 port map( clk => clk, rst => rst, data_in => input_ready, data_out => output_ready);
+		 port map( clk => clk, 
+					  rst => rst, 
+					  data_in => input_ready, 
+					  data_out => output_ready);
 
 		PM_XOR  : xor_n 
-		 port map(clk => clk, A => A, B => B, result => Result);
+		 port map(clk => clk, 
+					 A => A, 
+					 B => B, 
+					 result => Result);
 end architecture;

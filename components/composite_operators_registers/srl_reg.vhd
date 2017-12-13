@@ -58,9 +58,15 @@ architecture behavioral of srl_reg is
 
 	begin 
 		PM_NOR_READY_SIGNAL : shift_reg_srl
-		 port map( clk => clk, rst => rst, data_in => input_ready, data_out => output_ready);
+		 port map( clk => clk, 
+					  rst => rst, 
+					  data_in => input_ready, 
+					  data_out => output_ready);
 
 		PM_NOR  : srl_n 
-		 port map(clk => clk, A => A, B => B, result => Result);
+		 port map(clk => clk, 
+					 A => A, 
+					 B => B, 
+					 result => Result);
 
 end architecture;  
